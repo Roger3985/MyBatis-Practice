@@ -1,5 +1,6 @@
 package com.powernode.mybatis.test;
 
+import com.powernode.mybatis.pojo.Car;
 import com.powernode.mybatis.utils.SqlSessionUtil;
 import org.apache.ibatis.session.SqlSession;
 import org.junit.Test;
@@ -8,6 +9,19 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class CarMapperTest {
+
+    @Test
+    public void testInsertCarByPOJO() {
+        SqlSession sqlSession = SqlSessionUtil.openSession();
+        // 封裝資料
+        Car car = new Car(null, "3333", "比亞迪秦", 30.0, "2020-11-11", "新能源");
+        // 執行 SQL
+        int count = sqlSession.insert("insertCar", car); // ORM
+        System.out.println(count);
+        sqlSession.commit();
+        sqlSession.close();
+    }
+
 
     @Test
     public void testInsertCar() {

@@ -48,3 +48,30 @@
 
                  INSERT INTO car(car_num, brand, guide_price, produce_time, car_type) VALUES(#{carNum}, #{brand}, #{guidePrice}, #{produceTime}, #{carType});
 
+   -> java 程式中使用 POJO 類給 SQL 語句的占位符傳值：
+      Car car = new Car(null, "3333", "比亞迪秦", 30.0, "2020-11-11", "新能源");
+      注意：占位符 #{}，大括號裡面寫：pojo 類的屬性名
+      INSERT INTO car(car_num, brand, guide_price, produce_time, car_type)
+      VALUES(#{carNum}, #{brand}, #{guidePrice}, #{produceTime}, #{carType});
+
+      -> (1) 把 SQL 語句寫成這個德性：
+         INSERT INTO car(car_num, brand, guide_price, produce_time, car_type)
+         VALUES(#{xyz}, #{brand}, #{guidePrice}, #{produceTime}, #{carType});
+         (2) 出現了什麼問題呢？
+             -> There is no getter for property and named 'xyz' in 'class com.powernode.mybatis.pojo.Car'
+                mybatis 去找：Car 類中的 getXyz() 方法去了。沒找到。報錯了。
+         (3) 怎麼解決的？
+             -> 可以在 Car 類中提供一個 getXyz() 方法。這樣問題就解決的。
+         (4) 通過這個測試，得出一個結論： (因為 mybatis is a ORM Framework，所以 mybatis #{carNum} 通過反射機制調用 getCarNum)
+             -> 嚴格意義上來說：如果使用 POJO 物件傳遞值的話，#{} 這個大括號中到底寫什麼？
+                寫的是 get 方法的方法名去掉 get，然後剩下的單詞首字母小寫，然後放進去。
+                例如：getUsername --> #{username}
+                     getEmail --> #{email}
+                     ......
+         (5) 也就是說 mybatis 在底層給 ? 傳值的時候，先要獲取值，怎麼獲取的？
+             -> 調用了 pojo 物件的 get 方法，例如：car.getCarNum(). car.getCarType(). car.getBrand().
+
+
+
+
+
