@@ -4,8 +4,8 @@
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="ffdfad">
     <!-- insert 語句，id 是這條 SQL 語句的唯一標示符，這個 id 就代表了這條 SQL 語句。-->
-    <insert id="">
-        INSERT INTO car(id, car_num, brand, guide_price, produce_time, car_type)
-        VALUES(null, '1001', '豐田霸道', 30.0, '2000-10-11', '燃油車')
+    <insert id="insertCar">
+        INSERT INTO car(car_num, brand, guide_price, produce_time, car_type)
+        VALUES('1001', '豐田霸道', 30.0, '2000-10-11', '燃油車')
     </insert>
 </mapper>
