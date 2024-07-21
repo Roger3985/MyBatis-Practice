@@ -7,6 +7,24 @@
     <!-- default 表示默認使用的環境。 -->
     <!-- 默認環境什麼意思？當你使用 mybatis 創建 SqlSessionFactory 物件時，沒有指定環境的話，默認使用哪個環境 -->
     <environments default="powernodeDB">
+        <!--
+            transactionManager 標籤：
+                1. 作用：配置交易管理器。指定 mybatis 具體使用什麼方式去管理交易。
+                2. type 屬性有兩個值：
+                   (1) 第一個：JDBC：使用原生的 JDBC 程式碼來管理交易
+                       conn.setAutoCommit(false);
+                       ......
+                       conn.commit();
+                   (2) 第二個：MANAGED：mybatis 不再負責交易的管理，將交易管理交給其它的 JEE(JavaEE) 容器來管理，例如：spring
+                3. 大小寫無所謂。不區分大小寫。但是不能寫其他值，只能是二選一：
+                   jdbc、managed
+                4. 在 mybatis 中提供了一個交易管理器介面： Transaction
+                   該介面下有兩個實現類：
+                        JdbcTransaction
+                        ManagedTransaction
+                   如果 type="JDBC"，那麼底層會實例化 JdbcTransaction 物件。
+                   如果 type="MANAGED"，那麼底層會實例化 ManagedTransaction 物件。
+        -->
 
         <!-- 其中一個環境，連接的資料庫是 postgres -->
         <!-- 一般一個資料庫會對應一個 SqlSessionFactory 物件 -->
