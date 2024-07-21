@@ -7,7 +7,12 @@
     <!-- default 表示默認使用的環境。 -->
     <!-- 默認環境什麼意思？當你使用 mybatis 創建 SqlSessionFactory 物件時，沒有指定環境的話，默認使用哪個環境 -->
     <environments default="powernodeDB">
-        <!--
+
+        <!-- 其中一個環境，連接的資料庫是 postgres -->
+        <!-- 一般一個資料庫會對應一個 SqlSessionFactory 物件 -->
+        <!-- 一個環境 environment 會對應一個 SqlSessionFactory 物件 -->
+        <environment id="powernodeDB">
+            <!--
             transactionManager 標籤：
                 1. 作用：配置交易管理器。指定 mybatis 具體使用什麼方式去管理交易。
                 2. type 屬性有兩個值：
@@ -24,13 +29,28 @@
                         ManagedTransaction
                    如果 type="JDBC"，那麼底層會實例化 JdbcTransaction 物件。
                    如果 type="MANAGED"，那麼底層會實例化 ManagedTransaction 物件。
-        -->
-
-        <!-- 其中一個環境，連接的資料庫是 postgres -->
-        <!-- 一般一個資料庫會對應一個 SqlSessionFactory 物件 -->
-        <!-- 一個環境 environment 會對應一個 SqlSessionFactory 物件 -->
-        <environment id="powernodeDB">
+            -->
             <transactionManager type="JDBC"/>
+            <!--
+                dataSource 配置：
+                    1. dataSource 被稱為資料源。
+                    2. dataSource 作用是什麼？為程式提供 Connection 物件。（但凡是給程式提供 Connection 物件的，都叫做資料源。）
+                    3. 資料源實際上是一套規範： JDK 中有這套規範： javax.sql.DataSource (這個資料源的規範，這套介面實際上是 JDK 規定的)
+                    4. 我們自己也可以編寫資料源組件，只要實現 javax.sql.DataSource 介面就可以了。實現介面當中的所以方法。這樣就有了自己的資料源。
+                       -> 比如你可以寫一個屬於自己的資料庫連接池（資料庫連接池是提供連接物件的，所以資料庫連接池就是一個資料源）。
+                    5. 常見的資料源組件有哪些（常見的資料庫連接池有哪些呢？）
+                       -> druid、HikariCP、c3p0...
+                    6. type 屬性用來指定資料源的類型。就是指定具體使用什麼方式來獲取 Connection 物件：
+                       -> type 屬性有三個值：必須是三選一
+                          type="[UNPOOLED|POOLED|JNDI]"
+                          UNPOOLED: 不使用資料庫連接池技術，每次請求過來之後，都是創建新的 Connection 物件。
+                          POOLED: 使用 mybatis 自己實現的資料庫連接池。
+                          JNDI: 集成其它第三方的資料庫連接池。
+
+                          JNDI 是一套規範。誰實現了這套規範呢？大部分的 web 容器都實現了 JNDI 規範。
+                               例如：Tomcat、Jetty、WebLogic、WebSphere，這些服務器（容器）都實現了 JNDI 規範。
+                          JNDI 是： java 命名目錄介面。 Tomcat 服務器實現了這個規範。
+             -->
             <dataSource type="POOLED">
                 <property name="driver" value="org.postgresql.Driver"/>
                 <property name="url" value="jdbc:postgresql://localhost:5433/postgres"/>
