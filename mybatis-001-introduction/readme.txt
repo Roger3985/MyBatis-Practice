@@ -100,3 +100,47 @@
      -> 都不是固定的。
         <mapper resource="CarMapper.xml"/> 這種方式是從類路徑當中加載資源。
         <mapper url="file:///d:/CarMapper.xml"/> 這種方式是從絕對路徑當中加載資源。
+
+
+6. 關於 mybatis 的交易管理機制。（深度剖析）
+   * 在 mybatis-config.xml 文件中，可以通過以下的配置進行 mybatis 的交易管理
+     <transactionManager type="JDBC"/>
+   * type 屬性的值包括兩個：
+     (1) JDBC(jdbc)
+     (2) MANAGED(managed)
+     -> type 後面的值，只有以上兩個值可選，大小寫無所謂（不區分大小寫）。
+   * 在 mybatis 中提供了兩個交易管理機制
+     第一種： JDBC 交易管理器
+     第二種： MANAGED 交易管理器
+
+   * JDBC 交易管理器
+     -> mybatis framework 自己管理交易，自己採用原生的 JDBC 代碼去管理交易
+     -> 作業流程：conn.setAutoCommit(false); 開啟交易
+                ......業務處理......
+                conn.commit(); 手動提交交易
+        使用 JDBC 交易管理器的話，底層創建的交易管理器物件： JdbcTransaction 物件。
+
+        如果編寫的程式碼是以下的程式碼：
+        -> SqlSession sqlSession = sqlSessionFactory.openSession(true);
+           表示沒有開啟交易，因為這種方式壓根就不會執行： conn.setAutoCommit(false);
+           在 JDBC 交易中，沒有執行 conn.setAutoCommit(false); 那麼 autoCommit 就是 true。
+           如果 autoAutoCommit 是 true，就表示沒有開啟交易。
+           只要執行任何一條的 DML 語句就提交一次。（此方法不建議）
+
+   * MANAGED 交易管理器
+     -> mybatis 不再負責交易的管理了，交易管理交給其它的容器來負責。例如：spring。
+        簡單來說：我不管交易了，你來負責吧。
+
+        -> 對於我們當前的單純只有 mybatis 的情況下，如果配置為: MANAGED
+           那麼交易這塊是沒有人管理的。
+           沒有人管理交易： 表示交易壓根沒有人管理。
+
+           沒有人管理交易就是沒有交易。就代表 conn.autoAutoCommit(true);
+
+   * JDBC 中的交易：
+     -> 如果沒有在 JDBC 程式碼中執行： conn.setAutoCommit(false); 的話，默認的 autoCommit 是 true。
+
+
+   * 重點：
+     -> 以後注意了，只要你的 autoCommit 是 true，就代表沒有開啟交易。
+        只要你的 autoCommit 是 false 的時候，就代表開啟了交易。

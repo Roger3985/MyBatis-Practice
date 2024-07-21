@@ -22,7 +22,9 @@ public class MyBatisIntroductionTest {
         SqlSessionFactory sqlSessionFactory = sqlSessionFactoryBuilder.build(is); // 一般情況下都是一個資料庫對應一個 SqlSessionFactory 物件。
 
         // 獲取 SqlSession 物件
-        SqlSession sqlSession = sqlSessionFactory.openSession();
+        SqlSession sqlSession = sqlSessionFactory.openSession(); // 如果使用的交易管理器是 JDBC 的話，底層實際上會執行： conn.setAutoCommit(false);
+        // 此方法是不建議的，因為壓根沒有開啟交易
+        // SqlSession sqlSession = sqlSessionFactory.openSession(true);
 
         // 執行 SQL 語句
         int count = sqlSession.insert("insertCar"); // 返回值是影響資料庫當中的記錄條數
@@ -30,6 +32,6 @@ public class MyBatisIntroductionTest {
         System.out.println("How many to insert: " + count);
 
         // sqlSession 物件是不支持自動提交的，需要手動提交
-        sqlSession.commit();
+        sqlSession.commit(); // 如果使用的交易管理器是 JDBC 的話，底層實際上還是會執行 conn.commit();
     }
 }
