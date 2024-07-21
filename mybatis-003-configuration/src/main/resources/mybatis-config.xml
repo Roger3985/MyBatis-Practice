@@ -4,6 +4,21 @@
         "https://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
 
+    <!-- java.util.Properties 類。是一個 Map 集合。key and value 都是 String 類型 -->
+    <!-- 在 properties 標籤中可以配置很多的屬性 -->
+    <!-- <properties>
+        <property name="jdbc.driver" value="org.postgresql.Driver"/>
+        <property name="jdbc.url" value="jdbc:postgresql://localhost:5433/postgres"/>
+        <property name="jdbc.username" value="postgres"/>
+        <property name="jdbc.password" value="mysecretpassword"/>
+    </properties> -->
+
+    <!-- resource 一定是從類路徑開始查找資源 -->
+    <properties resource="jdbc.properties"/>
+    <!-- url 是透過絕對路徑下去查找資源 -->
+    <!-- 從絕對路徑當中加載資源，絕對路徑怎麼寫？ file:///路徑 -->
+    <!-- <properties url="file:///d:/jdbc.properties"/> -->
+
     <!-- default 表示默認使用的環境。 -->
     <!-- 默認環境什麼意思？當你使用 mybatis 創建 SqlSessionFactory 物件時，沒有指定環境的話，默認使用哪個環境 -->
     <environments default="powernodeDB">
@@ -52,10 +67,10 @@
                           JNDI 是： java 命名目錄介面。 Tomcat 服務器實現了這個規範。
              -->
             <dataSource type="POOLED">
-                <property name="driver" value="org.postgresql.Driver"/>
-                <property name="url" value="jdbc:postgresql://localhost:5433/postgres"/>
-                <property name="username" value="postgres"/>
-                <property name="password" value="mysecretpassword"/>
+                <property name="driver" value="${jdbc.driver}"/>
+                <property name="url" value="${jdbc.url}"/>
+                <property name="username" value="${jdbc.username}"/>
+                <property name="password" value="${jdbc.password}"/>
                 <!-- 提醒： 正常使用連接池的話，池中有很多參數需要設置的，設置好參數，可以讓連線池發揮得更好，事半功倍的效果。 -->
                 <!-- 具體連接池當中的參數如何配置呢？ 需要反覆的根據當前的業務情況進行測試 -->
                 <!-- poolMaximumActiveConnections：連接池當中最多的正在使用的連接池物件的數量上限。最多可以有多少個連接可以活動。默認值 10 -->
@@ -65,7 +80,7 @@
                 <!-- 強行讓某個連接空閑，超時時間設置 -->
                 <property name="poolMaximumCheckoutTime" value="10000"/>
                 <!-- 最多的空閑數量 -->
-                <property name="poolMaximumIdleConnection" value="5"/>
+                <property name="poolMaximumIdleConnections" value="5"/>
             </dataSource>
         </environment>
 

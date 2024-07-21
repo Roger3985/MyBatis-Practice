@@ -332,3 +332,31 @@
 2024-07-21 23:47:26.389 [main] DEBUG car.insertCar -==>  Preparing: INSERT INTO car(car_num, brand, guide_price, produce_time, car_type) VALUES('8888', '沃爾沃', 30.0, '2020-11-11', '燃油車')
 2024-07-21 23:47:26.389 [main] DEBUG car.insertCar -==> Parameters: 
 2024-07-21 23:47:26.398 [main] DEBUG car.insertCar -<==    Updates: 1
+2024-07-21 23:55:50.183 [main] DEBUG org.apache.ibatis.logging.LogFactory -Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2024-07-21 23:55:50.192 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-21 23:55:50.192 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-21 23:55:50.192 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-21 23:56:38.958 [main] DEBUG org.apache.ibatis.logging.LogFactory -Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2024-07-21 23:56:38.965 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-21 23:56:38.965 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-21 23:56:38.966 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-21 23:57:19.047 [main] DEBUG org.apache.ibatis.logging.LogFactory -Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2024-07-21 23:57:19.053 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-21 23:57:19.053 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-21 23:57:19.053 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-21 23:58:03.448 [main] DEBUG org.apache.ibatis.logging.LogFactory -Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2024-07-21 23:58:03.454 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-21 23:58:03.455 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-21 23:58:03.455 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-21 23:58:05.448 [main] DEBUG org.apache.ibatis.logging.LogFactory -Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2024-07-21 23:58:05.455 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-21 23:58:05.455 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-21 23:58:05.455 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-21 23:58:07.003 [main] DEBUG org.apache.ibatis.logging.LogFactory -Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2024-07-21 23:58:07.009 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-21 23:58:07.009 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-21 23:58:07.009 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-21 23:59:15.482 [main] DEBUG org.apache.ibatis.logging.LogFactory -Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2024-07-21 23:59:15.489 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-21 23:59:15.489 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-21 23:59:15.489 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
