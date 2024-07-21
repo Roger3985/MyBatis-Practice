@@ -11,6 +11,16 @@ import java.util.Map;
 public class CarMapperTest {
 
     @Test
+    public void testDeleteById() {
+        SqlSession sqlSession = SqlSessionUtil.openSession();
+        // 執行 SQL 語句
+        int count = sqlSession.delete("deleteById", 24);
+        System.out.println(count);
+        sqlSession.commit();
+        sqlSession.close();
+    }
+
+    @Test
     public void testInsertCarByPOJO() {
         SqlSession sqlSession = SqlSessionUtil.openSession();
         // 封裝資料

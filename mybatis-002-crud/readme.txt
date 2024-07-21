@@ -71,7 +71,15 @@
          (5) 也就是說 mybatis 在底層給 ? 傳值的時候，先要獲取值，怎麼獲取的？
              -> 調用了 pojo 物件的 get 方法，例如：car.getCarNum(). car.getCarType(). car.getBrand().
 
-
+3. delete
+   * 需求： 根據 id 刪除資料
+     將 id = 24 的資料刪除
+     ex: int count = sqlSession.delete("deleteById", 24);
+         <delete id="deleteById">
+             DELETE FROM car
+             WHERE id = #{id}
+         </delete>
+         注意：如果占位符只有一個，那麼 #{} 的大括號可以隨意，但是最好是見名知意。
 
 
 

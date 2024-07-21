@@ -3,6 +3,10 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="ffdfad">
+    <delete id="deleteById">
+        DELETE FROM car
+        WHERE id = #{id}
+    </delete>
     <!-- insert 語句，id 是這條 SQL 語句的唯一標示符，這個 id 就代表了這條 SQL 語句。-->
      <insert id="insertCar">
         <!-- INSERT INTO car(car_num, brand, guide_price, produce_time, car_type) VALUES(#{carNum}, #{brand}, #{guidePrice}, #{produceTime}, #{carType}); -->

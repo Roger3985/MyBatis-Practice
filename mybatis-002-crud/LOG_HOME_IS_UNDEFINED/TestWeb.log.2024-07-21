@@ -58,3 +58,18 @@
 2024-07-21 20:26:53.577 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction -Resetting autocommit to true on JDBC Connection [org.postgresql.jdbc.PgConnection@4e07b95f]
 2024-07-21 20:26:53.577 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction -Closing JDBC Connection [org.postgresql.jdbc.PgConnection@4e07b95f]
 2024-07-21 20:26:53.577 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -Returned connection 1309129055 to pool.
+2024-07-21 21:06:01.853 [main] DEBUG org.apache.ibatis.logging.LogFactory -Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2024-07-21 21:06:01.859 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-21 21:06:01.860 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-21 21:06:01.860 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-21 21:06:01.860 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-21 21:06:01.890 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction -Opening JDBC Connection
+2024-07-21 21:06:02.063 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -Created connection 304715920.
+2024-07-21 21:06:02.064 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction -Setting autocommit to false on JDBC Connection [org.postgresql.jdbc.PgConnection@12299890]
+2024-07-21 21:06:02.066 [main] DEBUG ffdfad.deleteById -==>  Preparing: DELETE FROM car WHERE id = ?
+2024-07-21 21:06:02.083 [main] DEBUG ffdfad.deleteById -==> Parameters: 24(Integer)
+2024-07-21 21:06:02.102 [main] DEBUG ffdfad.deleteById -<==    Updates: 1
+2024-07-21 21:06:02.103 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction -Committing JDBC Connection [org.postgresql.jdbc.PgConnection@12299890]
+2024-07-21 21:06:02.106 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction -Resetting autocommit to true on JDBC Connection [org.postgresql.jdbc.PgConnection@12299890]
+2024-07-21 21:06:02.106 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction -Closing JDBC Connection [org.postgresql.jdbc.PgConnection@12299890]
+2024-07-21 21:06:02.106 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -Returned connection 304715920 to pool.
