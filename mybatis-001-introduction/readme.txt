@@ -75,3 +75,28 @@
     另一個是： XxxxMapper.xml 這個文件主要是專門用來編寫 SQL 語句的配置文件。（ 一個表一個 ）
         -> t_user 表，一般會對應一個 UserMapper.xml
         -> t_student 表，一般會對應一個 StudentMapper.xml
+
+
+5. 關於第一個程式的小細節
+   * mybatis 中的 sql 語句的結尾 ";" 可以省略。
+   * Resources.getResourceAsStream("mybatis-config.xml")
+     -> 小技巧： 以後凡是遇到 resource 這個單詞，大部分情況下，這種加載資源的方式都是從類的根路徑下開始加載。（開始查找）
+        優點： 採用這種方式，從類路徑當中加載資源，項目的移植性很強，項目從 windows 移植到 linux or mac，程式碼不需要修改，因為這個資源文件一直都在類路徑當中。
+   * InputStream is = new FileInputStream("d:\\mybatis-config.xml");
+     -> 採用這種方式也可以。
+        缺點：可移植性太差，程式不夠健壯，可能會移植到其他的作業系統當中，，導致以上路徑無效，還需要修改 java 程式碼中的路徑。這樣違背了 OCP 原則。
+        （在不同的作業系統中，需要改程式碼，導致違反 OCP 原則）
+   * 已經驗證了：
+     (1) mybatis 核心配置文件的名字，不一定是： mybatis-config.xml。可以是其它的名字。
+     (2) mybatis 核心的配置文件存放的路徑，也不一定是在類的根路徑下。可以放到其它的位置，但為了項目的移植性，健壯性，最好將這個配置文件放到類路徑下面。
+   * InputStream is = ClassLoader.getSystemClassLoader().getResourceAsStream("mybatis-config.xml");
+     (1) ClassLoader.getSystemClassLoader() 獲取系統的類加載器。
+     (2) 系統類加載器有一個方法叫做： getResourceAsStream，它就是從類路徑當中加載資源的。
+     (3) 通過 source code 分析
+         -> InputStream is = Resources.getResourceAsStream("mybatis-config.xml");
+            底層的 source code 就是：
+            InputStream is = ClassLoader.getSystemClassLoader().getResourceAsStream("mybatis-config.xml");
+   * CarMapper.xml 文件的名字是固定的嗎？ CarMapper.xml 文件的路徑是固定的嗎？
+     -> 都不是固定的。
+        <mapper resource="CarMapper.xml"/> 這種方式是從類路徑當中加載資源。
+        <mapper url="file:///d:/CarMapper.xml"/> 這種方式是從絕對路徑當中加載資源。

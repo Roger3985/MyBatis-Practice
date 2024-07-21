@@ -18,12 +18,5 @@
         <!-- 執行 XxxxMapper.xml 文件的路徑 -->
         <!-- resource 屬性會自動從類的根路徑下開始查找資源 -->
         <mapper resource="CarMapper.xml"/>
-        <!-- resource 屬性，是從類路徑當中加載資源。 -->
-        <!-- <mapper resource="com/CarMapper2.xml"/> -->
-
-        <!-- url 屬性，從絕對路徑當中加載資源。（很少使用） -->
-        <!-- 語法格式： file:///絕對路徑 -->
-        <!-- 不建議： 因為移植性差 -->
-        <!-- <mapper url="file:///d:/CarMapper.xml"/> -->
     </mappers>
 </configuration>

@@ -5,6 +5,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
+import java.io.FileInputStream;
 import java.io.InputStream;
 
 public class MyBatisIntroductionTest {
@@ -15,6 +16,9 @@ public class MyBatisIntroductionTest {
 
         // 獲取 SqlSessionFactory
         InputStream is = Resources.getResourceAsStream("mybatis-config.xml"); // Resources.getResourcesAsStream 默認就是從類的根路徑下開始查找資源。
+        // InputStream is = Resources.getResourceAsStream("com/mybatis.xml"); // Resources.getResourcesAsStream 默認就是從類的根路徑下開始查找資源。
+        // InputStream is = new FileInputStream("d:\\mybatis-config.xml") // 自己 new 也可以
+        // InputStream is = ClassLoader.getSystemClassLoader().getResourceAsStream("mybatis-config.xml");
         SqlSessionFactory sqlSessionFactory = sqlSessionFactoryBuilder.build(is); // 一般情況下都是一個資料庫對應一個 SqlSessionFactory 物件。
 
         // 獲取 SqlSession 物件
