@@ -12,6 +12,15 @@ import java.util.Map;
 public class CarMapperTest {
 
     @Test
+    public void testNamespace() {
+        SqlSession sqlSession = SqlSessionUtil.openSession();
+        // 正確的 namespace 寫法 是指 namespace.id
+        List<Car> cars = sqlSession.selectList("ajflaj.selectAll");
+        cars.forEach(car -> System.out.println(car));
+        sqlSession.close();
+    }
+
+    @Test
     public void testSelectAll() {
         SqlSession sqlSession = SqlSessionUtil.openSession();
         // 執行 SQL 語句

@@ -25,6 +25,7 @@
         <!-- 執行 XxxxMapper.xml 文件的路徑 -->
         <!-- resource 屬性會自動從類的根路徑下開始查找資源 -->
         <mapper resource="CarMapper.xml"/>
+        <mapper resource="UserMapper.xml"/>
         <!-- resource 屬性，是從類路徑當中加載資源。 -->
         <!-- <mapper resource="com/CarMapper2.xml"/> -->
 

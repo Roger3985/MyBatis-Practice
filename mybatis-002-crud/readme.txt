@@ -156,3 +156,20 @@
 
     注意：resultType 還是指定要封裝的結果集的類型。不是指定 List 類型，是指定 List 集合中元素的類型。
          selectList 方法： mybatis 通過這個方法就可以得知你需要一個 List 集合。它會自動給你返回一個 List 集合。
+
+7. 在 sql mapper.xml 文件當中有一個 namespace，這個屬性是用來指定命名空間的。可以防止 id 重複。
+   怎麼用？
+   Ans: 在 xml 文件中：
+        <mapper namespace="ajflaj">
+            <!-- 查詢多個 -->
+            <select id="selectAll" resultType="com.powernode.mybatis.pojo.Car">
+                SELECT
+                    id, car_num as carNum, brand, guide_price as guidePrice,
+                    produce_time as produceTime,
+                    car_type as carType
+                FROM
+                    car
+            </select>
+        </mapper>
+        -> 在 java 中互相搭配的寫法：List<Car> cars = sqlSession.selectList("ajflaj.selectAll");
+        -> 實際上，本質上，mybatis 中的 sqlId 的完整寫法： namespace.id
