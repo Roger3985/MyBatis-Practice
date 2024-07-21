@@ -81,5 +81,17 @@
          </delete>
          注意：如果占位符只有一個，那麼 #{} 的大括號可以隨意，但是最好是見名知意。
 
+4. update
+   * 需求：根據 id 修改某條紀錄
+     實現：
+         <update id="updateById">
+             UPDATE car
+             SET car_num=#{carNum}, brand=#{brand}, guide_price=#{guidePrice}, produce_time=#{produceTime}, car_type=#{carType}
+             WHERE id=#{id}
+         </update>
+         Car car = new Car(4, "9999", "凱美瑞", 30.3, "1999-11-10", "燃油車");
+         int count = sqlSession.update("updateById", car);
+
+
 
 

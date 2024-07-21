@@ -9,7 +9,7 @@ package com.powernode.mybatis.pojo;
 public class Car {
     // 資料庫表當中的字段應該和 pojo 類的屬性一一對應上。
     // 建議使用包裝類，這樣可以防止 null 的問題。
-    private Long id;
+    private Integer id;
     private String carNum;
     private String brand;
     private Double guidePrice;
@@ -19,7 +19,7 @@ public class Car {
     public Car() {
     }
 
-    public Car(Long id, String carNum, String brand, Double guidePrice, String produceTime, String carType) {
+    public Car(Integer id, String carNum, String brand, Double guidePrice, String produceTime, String carType) {
         this.id = id;
         this.carNum = carNum;
         this.brand = brand;
@@ -28,11 +28,11 @@ public class Car {
         this.carType = carType;
     }
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
