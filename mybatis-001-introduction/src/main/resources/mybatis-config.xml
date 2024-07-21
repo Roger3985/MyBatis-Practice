@@ -8,13 +8,15 @@
             <transactionManager type="JDBC"/>
             <dataSource type="POOLED">
                 <property name="driver" value="org.postgresql.Driver"/>
-                <property name="url" value=""/>
-                <property name="username" value="${username}"/>
-                <property name="password" value="${password}"/>
+                <property name="url" value="jdbc:postgresql://localhost:5433/postgres"/>
+                <property name="username" value="postgres"/>
+                <property name="password" value="mysecretpassword"/>
             </dataSource>
         </environment>
     </environments>
     <mappers>
-        <mapper resource="org/mybatis/example/BlogMapper.xml"/>
+        <!-- 執行 XxxxMapper.xml 文件的路徑 -->
+        <!-- resource 屬性會自動從類的根路徑下開始查找資源 -->
+        <mapper resource="CarMapper.xml"/>
     </mappers>
 </configuration>
