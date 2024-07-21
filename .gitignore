@@ -1,4 +1,10 @@
 target/
+!.mvn/wrapper/maven-wrapper.jar
+.mvn
+mvnw.cmd
+mvnw
+!**/src/main/**/target/
+!**/src/test/**/target/
 
 
 ### IntelliJ IDEA ###
