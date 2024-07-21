@@ -42,7 +42,7 @@
 ＊ 第五步：在 mybatis-config.xml 文件中指定 XxxxMapper.xml 文件的路徑。
    <mapper resource="CarMapper.xml"/>
    注意：resource 屬性會自動從類的根路徑下開始查找資源。
-＊ 第六步：編寫 MyBatis 程式。
+＊ 第六步：編寫 MyBatis 程式。（使用 mybatis 的類庫，編寫 mybatis 程式，連接資料庫，做基礎 CRUD。
 
 3. 從 XML 中構建 SqlSessionFactory
    通過官方的這句話，我可以想到什麼呢？
