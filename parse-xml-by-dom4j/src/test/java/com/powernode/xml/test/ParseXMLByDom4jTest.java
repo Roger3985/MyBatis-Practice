@@ -13,6 +13,36 @@ import java.util.List;
 public class ParseXMLByDom4jTest {
 
     @Test
+    public void testParseSqlMapperXML() throws DocumentException {
+        SAXReader reader = new SAXReader();
+        InputStream is = ClassLoader.getSystemClassLoader().getResourceAsStream("CarMapper.xml");
+        Document document = reader.read(is);
+        // 獲取 namespace
+        String xpath = "/mapper";
+        Element mapper = (Element) document.selectSingleNode(xpath);
+        String namespace = mapper.attributeValue("namespace");
+        // System.out.println(namespace);
+        // 獲取 mapper 節點下所有的子節點
+        List<Element> elements = mapper.elements();
+        // 遍歷
+        elements.forEach(element -> {
+            // 獲取 sqlId
+            String id = element.attributeValue("id");
+            System.out.println(id);
+            // 獲取 resultType
+            String resultType = element.attributeValue("resultType"); // 沒有這個屬性的話，會自動返回 "null"。
+            System.out.println(resultType);
+            // 獲取標籤中的 sql 語句（表示獲取標籤中的文本內容，而且去除前後空白）
+            String sql = element.getTextTrim();
+            System.out.println(sql);
+            // mybatis 封裝了 jdbc，早晚要執行帶有 ? 的 sql 語句。
+            // 轉換
+            String newSql = sql.replaceAll("#\\{[0-9A-Za-z_$}]*", "?"); // #{屬性名}
+            System.out.println(newSql);
+        });
+    }
+
+    @Test
     public void testParseMyBatisConfigXML() throws DocumentException {
         // 創建 SAXReader 物件
         SAXReader reader = new SAXReader();
