@@ -3,12 +3,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.powernode</groupId>
-  <artifactId>mybatis-001-introduction</artifactId>
+  <artifactId>junit-test</artifactId>
   <version>1.0-SNAPSHOT</version>
-  <!-- 打包方式 jar -->
   <packaging>jar</packaging>
 
-  <name>mybatis-001-introduction</name>
+  <name>junit-test</name>
   <url>http://maven.apache.org</url>
 
   <properties>
@@ -18,20 +17,6 @@
   </properties>
 
   <dependencies>
-    <!-- mybatis 依賴 -->
-    <dependency>
-      <groupId>org.mybatis</groupId>
-      <artifactId>mybatis</artifactId>
-      <version>3.5.16</version>
-    </dependency>
-
-    <!-- postgres(driver) 依賴 -->
-    <dependency>
-      <groupId>org.postgresql</groupId>
-      <artifactId>postgresql</artifactId>
-      <version>42.7.3</version>
-    </dependency>
-
     <!-- junit 依賴 -->
     <dependency>
       <groupId>junit</groupId>
@@ -39,20 +24,5 @@
       <version>4.13.2</version>
       <scope>test</scope>
     </dependency>
-
   </dependencies>
-
-  <build>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <configuration>
-          <source>21</source>
-          <target>21</target>
-          <compilerArgs>--enable-preview</compilerArgs>
-        </configuration>
-      </plugin>
-    </plugins>
-  </build>
 </project>

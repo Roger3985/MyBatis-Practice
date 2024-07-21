@@ -4,17 +4,15 @@ import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
+import org.junit.Test;
 
 import java.io.IOException;
 
-/**
- * 採用正規的方式： 寫一個完整版的 MyBatis 程式。
- * @author Roger
- * @version 1.0
- * @since 1.0
- */
-public class MyBatisCompleteTest {
-    public static void main(String[] args) {
+public class CarMapperTest {
+
+    @Test
+    public void testInsertCar() {
+        // 編寫 mybatis 程序
         SqlSession sqlSession = null;
         try {
             SqlSessionFactoryBuilder sqlSessionFactoryBuilder = new SqlSessionFactoryBuilder();
