@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+    <!-- default 表示默認使用的環境。 -->
+    <!-- 默認環境什麼意思？當你使用 mybatis 創建 SqlSessionFactory 物件時，沒有指定環境的話，默認使用哪個環境 -->
+    <environments default="powernodeDB">
+
+        <!-- 其中一個環境，連接的資料庫是 postgres -->
+        <!-- 一般一個資料庫會對應一個 SqlSessionFactory 物件 -->
+        <!-- 一個環境 environment 會對應一個 SqlSessionFactory 物件 -->
+        <environment id="powernodeDB">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="org.postgresql.Driver"/>
+                <property name="url" value="jdbc:postgresql://localhost:5433/postgres"/>
+                <property name="username" value="postgres"/>
+                <property name="password" value="mysecretpassword"/>
+            </dataSource>
+        </environment>
+
+        <!-- 這是 mybatis 的另一個環境，也就是連接的資料庫是另一個資料庫 mybatis -->
+        <environment id="mybatisDB">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="org.postgresql.Driver"/>
+                <property name="url" value="jdbc:postgresql://localhost:5433/mybatis"/>
+                <property name="username" value="postgres"/>
+                <property name="password" value="mysecretpassword"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <mappers>
+        <mapper resource="CarMapper.xml"/>
+    </mappers>
+</configuration>
