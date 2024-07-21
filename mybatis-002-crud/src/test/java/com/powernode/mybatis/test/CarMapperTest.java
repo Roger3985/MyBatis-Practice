@@ -6,9 +6,32 @@ import org.apache.ibatis.session.SqlSession;
 import org.junit.Test;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class CarMapperTest {
+
+    @Test
+    public void testSelectAll() {
+        SqlSession sqlSession = SqlSessionUtil.openSession();
+        // 執行 SQL 語句
+        // List<Object> cars = sqlSession.selectList("selectAll");
+        List<Car> cars = sqlSession.selectList("selectAll");
+        // 遍歷
+        cars.forEach(car -> System.out.println(car));
+        sqlSession.close();
+    }
+
+    @Test
+    public void testSelectById() {
+        SqlSession sqlSession = SqlSessionUtil.openSession();
+        // 執行 DQL 語句。查詢。根據 id 查詢。返回結果一定是一條
+        // mybatis 底層執行了 select 語句之後，一定會返回一個結果集物件：ResultSet
+        // JDBC 中叫做 ResultSet，接下來就是 mybatis 應該從 ResultSet 中取出資料，封裝 java 物件。
+        Object car = sqlSession.selectOne("selectById", 3);
+        System.out.println(car);
+        sqlSession.close();
+    }
 
     @Test
     public void testUpdateById() {

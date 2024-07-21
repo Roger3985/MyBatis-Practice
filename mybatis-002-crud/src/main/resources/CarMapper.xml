@@ -3,6 +3,32 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="ffdfad">
+
+    <!-- 查詢多個 -->
+    <select id="selectAll" resultType="com.powernode.mybatis.pojo.Car">
+        SELECT
+            id, car_num as carNum, brand, guide_price as guidePrice,
+            produce_time as produceTime,
+            car_type as carType
+        FROM
+            car
+    </select>
+
+    <!-- 查詢單一個 -->
+    <select id="selectById" resultType="com.powernode.mybatis.pojo.Car">
+        <!-- SELECT *
+        FROM car
+        WHERE id = #{id} -->
+        SELECT
+            id, car_num as carNum, brand, guide_price as guidePrice,
+            produce_time as produceTime,
+            car_type as carType
+        FROM
+            car
+        WHERE
+            id = #{id}
+    </select>
+
     <!-- 更新 -->
     <update id="updateById">
         UPDATE car

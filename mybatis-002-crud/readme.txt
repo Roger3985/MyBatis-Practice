@@ -93,5 +93,66 @@
          int count = sqlSession.update("updateById", car);
 
 
+5. select (查一個，根據主鍵查詢的話，返回結果一定是一個。)
+   * 需求：根據 id 查詢
+     實現：
+         <select id="selectById" resultType="com.powernode.mybatis.pojo.Car">
+             SELECT *
+             FROM car
+             WHERE id = #{id}
+         </select>
+         Object car = sqlSession.selectOne("selectById", 3);
+
+     需要特別注意的是：
+        select 標籤中的 resultType 屬性，這個屬性用來告訴 mybatis，查詢結果集封裝成什麼類型的 java 物件，你需要告訴 mybatis
+        resultType 通常寫的是：全限定類名。
+
+        Car{id=3, carNum='null', brand='豐田霸道', guidePrice=null, produceTime='null', carType='null'}
+        輸出結果有點不對勁：
+               id 和 brand 屬性有值。
+               其他屬性為 null。
+
+        carNum 以及其他的這幾個屬性沒有附上值的原因是什麼？
+               select * from car where id = #{id}
+               執行結果:
+                id | car_num |  brand   | guide_price | produce_time | car_type
+               ----+---------+----------+-------------+--------------+----------
+                 3 | 1001    | 豐田霸道 |       30.00 | 2000-10-11   | 燃油車
+               car_num, guide_price, produce_time, car_type 這是查詢結果的列名。
+               這些列名和 Car 類中的屬性名對不上。
+               Car 類的屬性名：
+               carNum, guidePrice, produceTime, carType
+
+               那這個問題要怎麼解決呢？
+               Ans: select 語句查詢的時候，查詢結果集的列名是可以使用 as 關鍵字起別名的。
+
+               <select id="selectById" resultType="com.powernode.mybatis.pojo.Car">
+                   SELECT
+                       id, car_num as carNum, brand, guide_price as guidePrice,
+                       produce_time as produceTime,
+                       car_type as carType
+                   FROM
+                       car
+                   WHERE
+                       id = #{id}
+               </select>
+
+               起別名之後：
+               id | carnum |  brand   | guideprice | producetime | cartype
+               ----+--------+----------+------------+-------------+---------
+                 3 | 1001   | 豐田霸道 |      30.00 | 2000-10-11  | 燃油車
 
 
+6. select (查所有)
+    <select id="selectAll" resultType="com.powernode.mybatis.pojo.Car">
+            SELECT
+                id, car_num as carNum, brand, guide_price as guidePrice,
+                produce_time as produceTime,
+                car_type as carType
+            FROM
+                car
+        </select>
+    List<Car> cars = sqlSession.selectList("selectAll");
+
+    注意：resultType 還是指定要封裝的結果集的類型。不是指定 List 類型，是指定 List 集合中元素的類型。
+         selectList 方法： mybatis 通過這個方法就可以得知你需要一個 List 集合。它會自動給你返回一個 List 集合。
