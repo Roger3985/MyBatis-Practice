@@ -3,6 +3,13 @@
         PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         "https://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
+
+    <!-- 開啟 mybatis 對標準日誌的實現 -->
+    <!-- <settings>
+        <setting name="logImpl" value="STDOUT_LOGGING"/>
+        <setting name="logImpl" value="SLF4J"/>
+    </settings> -->
+
     <environments default="development">
         <environment id="development">
             <transactionManager type="JDBC"/>

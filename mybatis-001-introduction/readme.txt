@@ -144,3 +144,42 @@
    * 重點：
      -> 以後注意了，只要你的 autoCommit 是 true，就代表沒有開啟交易。
         只要你的 autoCommit 是 false 的時候，就代表開啟了交易。
+
+
+7. 關於 mybatis 集成的日誌組件，讓我們調試起來更加方便。
+   * mybatis 常見的集成日誌組件有哪些呢？
+     (1) SLF4J (沙拉風)：沙拉風是一個日誌標準，其中有一個框架叫做 logback，它實現了沙拉風規範。
+     (2) LOG4J
+     (3) LOG4J2
+     (4) STDOUT_LOGGING
+     ......
+
+     -> 注意：log4j log4j2 logback 都是同一個作者開發的。
+
+   * 其中 STDOUT_LOGGING 是標準日誌，mybatis 已經實現了這種標準日誌。
+     mybatis 框架本身已經實現了這種標準。
+     只要開啟即可。
+     怎麼開啟呢？在 mybatis-config.xml 文件中使用 setting 標籤進行配置開啟
+     <settings>
+             <setting name="logImpl" value="STDOUT_LOGGING"/>
+     </settings>
+    -> 注意：這個標籤在撰寫的時候要注意，它應該出現在 environments 標籤之前。
+            注意順序，當然，不需要記憶這個順序，因為有 dtd 文件進行約束，我們只需要參考 dtd 約束即可。
+
+    -> 這種實現也是可以的，可以看到一些訊息，比如：連接物件什麼時候創建，什麼時候關閉，sql 語句是怎麼樣的。
+       但是沒有更詳細的日期，執行緒名字，等等等。
+       如果你想要使用更加豐富的配置，可以集成第三方的 log 組件。
+
+   * 集成 logback 日誌框架
+     logback 日誌框架實現了 slf4j 標準。（沙拉風：日誌門面、日誌標準）
+     (1) 第一步：引入 logback 的依賴。
+                <dependency>
+                  <groupId>ch.qos.logback</groupId>
+                  <artifactId>logback-classic</artifactId>
+                  <version>1.2.13</version>
+                  <scope>test</scope>
+                </dependency>
+     (2) 第二步：引入 logback 所必須的 xml 的配置文件。
+                -> 這個配置文件的名字必須叫做： logback.xml 或者 logback-test.xml，不能是其它的名字。
+                -> 這個配置文件必須放在類的根路徑下，不能是其它的位置。
+                -> 主要配置日誌輸出相關的級別以及日誌具體的格式。

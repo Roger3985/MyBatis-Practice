@@ -40,6 +40,13 @@
       <scope>test</scope>
     </dependency>
 
+    <!-- 引入 logback 的依賴，這個日誌框架實現了 slf4j 規範 -->
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-classic</artifactId>
+      <version>1.2.13</version>
+      <scope>test</scope>
+    </dependency>
   </dependencies>
 
   <build>
