@@ -11,6 +11,31 @@ import java.io.IOException;
 public class ConfigurationTest {
 
     @Test
+    public void testDataSource() throws IOException {
+        SqlSessionFactoryBuilder sqlSessionFactoryBuilder = new SqlSessionFactoryBuilder();
+        // sqlSessionFactory 物件：一個資料一個。不要頻繁創建物件。
+        SqlSessionFactory sqlSessionFactory = sqlSessionFactoryBuilder.build(Resources.getResourceAsStream("mybatis-config.xml"));
+        // 通過 sqlSessionFactory 物件可以開啟多個會話。
+//        // 會話 1
+//        SqlSession sqlSession1 = sqlSessionFactory.openSession();
+//        sqlSession1.insert("insertCar");
+//        sqlSession1.commit();
+//        sqlSession1.close(); // 因為要測試連接池的效果：關閉是需要的，要不然測不出來。
+//
+//        // 會話 2
+//        SqlSession sqlSession2 = sqlSessionFactory.openSession();
+//        sqlSession2.insert("insertCar");
+//        sqlSession2.commit();
+//        sqlSession2.close();
+
+        for (int i = 0; i < 4; i++) {
+            SqlSession sqlSession = sqlSessionFactory.openSession();
+            sqlSession.insert("insertCar");
+            // 不要關閉
+        }
+    }
+
+    @Test
     public void testEnvironment() throws IOException {
         // 獲取 SqlSessionFactory 物件 (採用默認的方式獲取)
         SqlSessionFactoryBuilder sqlSessionFactoryBuilder = new SqlSessionFactoryBuilder();

@@ -4,6 +4,7 @@
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="car">
     <insert id="insertCar">
-        insert into car value('8888', '沃爾沃', 30.0, '2000-11-11', '燃油車')
+        INSERT INTO car(car_num, brand, guide_price, produce_time, car_type)
+        VALUES('8888', '沃爾沃', 30.0, '2020-11-11', '燃油車')
     </insert>
 </mapper>
