@@ -3,6 +3,22 @@
         PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         "https://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
+    
+    <!-- 起別名 -->
+    <typeAliases>
+        <!--
+            type: 指定給哪個類型起別名
+            alias: 指定別名
+            注意: 別名不區分大小寫
+            alias 屬性是可以省略的。有默認的別名。
+            省略 alias 之後，別名就是類的簡名，比如: com.powernode.mybatis.pojo.Car 的別名就是 Car / car / cAR/ cAr，不區分大小寫
+        -->
+        <!-- <typeAlias type="com.powernode.mybatis.pojo.Car" alias="aaa"/> -->
+
+        <!-- 將這個包下的所有的類全部自動起別名，別名就是類簡名，不區分大小寫。 -->
+        <package name="com.powernode.mybatis.pojo"/>
+    </typeAliases>
+
     <environments default="powernodeDB">
         <environment id="powernodeDB">
             <transactionManager type="JDBC"/>
@@ -27,5 +43,14 @@
     </environments>
     <mappers>
         <mapper resource="CarMapper.xml"/>
+        <!-- 使用這種方式的前提: CarMapper.xml 文件的位置不能隨便放 -->
+        <!-- 必須放在和 CarMapper 介面放在一起 -->
+        <!-- XML 文件的名子必須和介面名一樣 -->
+        <!-- <mapper class="com.powernode.mybatis.mapper.CarMapper"/> -->
+
+        <!-- 只要配置一個就可以了，會將全部的 mapper.xml 都配置好  -->
+        <!-- 這種方式在實際開發中是使用的 -->
+        <!-- 前提是: XML 文件必須和介面放在一起，並且名子一致 -->
+        <mapper class="com.powernode.mybatis.mapper"/>
     </mappers>
 </configuration>

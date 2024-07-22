@@ -2,6 +2,7 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace 不能使用別名機制，必須寫全限定介面名稱，帶有包名的。 -->
 <mapper namespace="com.powernode.mybatis.mapper.CarMapper">
 
     <delete id="deleteBatch">

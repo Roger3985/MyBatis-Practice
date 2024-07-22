@@ -61,3 +61,46 @@ org.apache.ibatis.exceptions.PersistenceException:
         brand like concat('%', '${brand}', '%')
    第四種解決方式:
         "%"#{brand}"%"
+
+5. 關於 MyBatis 中別名機制:
+<!-- 起別名 -->
+<typeAliases>
+    <!--
+        type: 指定給哪個類型起別名
+        alias: 指定別名
+        注意: 別名不區分大小寫
+        alias 屬性是可以省略的。有默認的別名。
+        省略 alias 之後，別名就是類的簡名，比如: com.powernode.mybatis.pojo.Car 的別名就是 Car / car / cAR/ cAr，不區分大小寫
+    -->
+    <!-- <typeAlias type="com.powernode.mybatis.pojo.Car" alias="aaa"/> -->
+
+    <!-- 將這個包下的所有的類全部自動起別名，別名就是類簡名，不區分大小寫。 -->
+    <package name="com.powernode.mybatis.pojo"/>
+</typeAliases>
+總結: 所有別名不區分大小寫，namespace 不能使用別名機制。
+
+6. mybatis-config.xml 文件中的 mappers 標籤。
+   <mapper resource="CarMapper.xml"/> 要求類的根路徑下必須有: CarMapper.xml
+   <mapper url="file:///d:/CarMapper.xml"/> 要求在 d:/下有 CarMapper.xml
+   <mapper class="全限定介面名，帶有包名"/>
+
+   mapper 標籤的屬性可以有三個:
+   (1) resource: 這種方式是從類的根路徑下開始查找資源，採用這種方式的話，你的配置文件需要放到類路徑當中才行。
+   (2) url: 這種方式是一種絕對路徑的方式，這種方式不要求配置文件必須放在類路徑當中，哪裡都行，只要提供一個絕對路徑就行。這種方式使用極少，因為移植性太差。
+   (3) class: 這個位置提供的是 mapper 介面的全限定介面名，必須帶有包名的。
+              思考: mapper 標籤的作用是指定 SqlMapper.xml 文件的路徑，指定介面有什麼用?
+              <mapper class="com.powernode.mybatis.mapper.CarMapper"/>
+              如果你的 class 指定是: com.powernode.mybatis.mapper.CarMapper
+              那麼 mybatis 框架會自動去 com/powernode/mybatis/mapper 目錄下查找 CarMapper.xml 文件。
+              注意: 也就是說，如果你採用這種方式，那麼你必須保證 CarMapper.xml 文件和 CarMapper 介面必須在同一個目錄底下。並且名子一致。
+              CarMapper 介面 -> CarMapper.xml
+              LogMapper 介面 -> LogMapper.xml
+              ......
+   提醒: !!!!!!!!!!!!!!!
+   -> 在 IDEA 的 resources 目錄下新建多重目錄的話: 必須是這樣創建:
+          com/powernode/mybatis/mapper
+      不能這樣:
+          com.powernode.mybatis.mapper
+
+
+
