@@ -64,7 +64,7 @@ public class CarMapperTest {
         try (SqlSession sqlSession = SqlSessionUtil.openSession()) {
             CarMapper mapper = sqlSession.getMapper(CarMapper.class);
             List<Car> cars = mapper.selectAll();
-            cars.forEach(car -> System.out.println(car.getBrand()));
+            cars.forEach(car -> System.out.println(car));
         } catch (Exception e) {
             e.printStackTrace();
         }
