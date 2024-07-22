@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.powernode.mybatis.mapper.CarMapper">
+    <insert id="insert">
+        INSERT INTO car(car_num, brand, guide_price, produce_time, car_type)
+        VALUES(#{carNum}, #{brand}, #{guidePrice}, #{produceTime}, #{carType})
+    </insert>
+    <delete id="deleteById">
+        DELETE FROM car
+        WHERE id = #{id}
+    </delete>
+    <update id="update">
+        UPDATE car
+        SET car_num=#{carNum}, brand=#{brand}, guide_price=#{guidePrice}, produce_time=#{produceTime}, car_type=#{carType}
+        WHERE id = #{id}
+    </update>
+    <select id="selectById" resultType="com.powernode.mybatis.pojo.Car">
+        SELECT
+            id,
+            car_num as carNum,
+            brand,
+            guide_price as guidePrice,
+            produce_time as produceTime,
+            car_type as carType
+        FROM car
+        WHERE id = #{id}
+    </select>
+
+    <select id="selectAll" resultType="com.powernode.mybatis.pojo.Car">
+        SELECT
+            id,
+            car_num as carNum,
+            brand,
+            guide_price as guidePrice,
+            produce_time as produceTime,
+            car_type as carType
+        FROM car
+    </select>
+</mapper>

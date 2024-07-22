@@ -58,7 +58,7 @@
          INSERT INTO car(car_num, brand, guide_price, produce_time, car_type)
          VALUES(#{xyz}, #{brand}, #{guidePrice}, #{produceTime}, #{carType});
          (2) 出現了什麼問題呢？
-             -> There is no getter for property and named 'xyz' in 'class com.powernode.mybatis.pojo.Car'
+             -> There is no getter for property and named 'xyz' in 'class com.pojo.mybatis.com.powernode.Car'
                 mybatis 去找：Car 類中的 getXyz() 方法去了。沒找到。報錯了。
          (3) 怎麼解決的？
              -> 可以在 Car 類中提供一個 getXyz() 方法。這樣問題就解決的。
@@ -96,7 +96,7 @@
 5. select (查一個，根據主鍵查詢的話，返回結果一定是一個。)
    * 需求：根據 id 查詢
      實現：
-         <select id="selectById" resultType="com.powernode.mybatis.pojo.Car">
+         <select id="selectById" resultType="com.pojo.mybatis.com.powernode.Car">
              SELECT *
              FROM car
              WHERE id = #{id}
@@ -126,7 +126,7 @@
                那這個問題要怎麼解決呢？
                Ans: select 語句查詢的時候，查詢結果集的列名是可以使用 as 關鍵字起別名的。
 
-               <select id="selectById" resultType="com.powernode.mybatis.pojo.Car">
+               <select id="selectById" resultType="com.pojo.mybatis.com.powernode.Car">
                    SELECT
                        id, car_num as carNum, brand, guide_price as guidePrice,
                        produce_time as produceTime,
@@ -144,7 +144,7 @@
 
 
 6. select (查所有)
-    <select id="selectAll" resultType="com.powernode.mybatis.pojo.Car">
+    <select id="selectAll" resultType="com.pojo.mybatis.com.powernode.Car">
             SELECT
                 id, car_num as carNum, brand, guide_price as guidePrice,
                 produce_time as produceTime,
@@ -162,7 +162,7 @@
    Ans: 在 xml 文件中：
         <mapper namespace="ajflaj">
             <!-- 查詢多個 -->
-            <select id="selectAll" resultType="com.powernode.mybatis.pojo.Car">
+            <select id="selectAll" resultType="com.pojo.mybatis.com.powernode.Car">
                 SELECT
                     id, car_num as carNum, brand, guide_price as guidePrice,
                     produce_time as produceTime,

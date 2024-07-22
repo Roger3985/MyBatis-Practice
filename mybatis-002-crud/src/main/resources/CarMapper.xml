@@ -5,7 +5,7 @@
 <mapper namespace="111">
 
     <!-- 查詢多個 -->
-    <select id="selectAll" resultType="com.powernode.mybatis.pojo.Car">
+    <select id="selectAll" resultType="com.pojo.mybatis.com.powernode.Car">
         SELECT
             id, car_num as carNum, brand, guide_price as guidePrice,
             produce_time as produceTime,
@@ -15,7 +15,7 @@
     </select>
 
     <!-- 查詢單一個 -->
-    <select id="selectById" resultType="com.powernode.mybatis.pojo.Car">
+    <select id="selectById" resultType="com.pojo.mybatis.com.powernode.Car">
         <!-- SELECT *
         FROM car
         WHERE id = #{id} -->

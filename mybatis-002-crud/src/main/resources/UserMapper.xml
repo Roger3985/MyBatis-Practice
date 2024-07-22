@@ -5,7 +5,7 @@
 <mapper namespace="ajflaj">
 
     <!-- 查詢多個 -->
-    <select id="selectAll" resultType="com.powernode.mybatis.pojo.Car">
+    <select id="selectAll" resultType="com.pojo.mybatis.com.powernode.Car">
         SELECT
             id, car_num as carNum, brand, guide_price as guidePrice,
             produce_time as produceTime,

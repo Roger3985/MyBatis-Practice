@@ -1,0 +1,200 @@
+2024-07-22 12:22:58.251 [main] DEBUG org.apache.ibatis.logging.LogFactory -Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2024-07-22 12:22:58.264 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 12:22:58.264 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 12:22:58.264 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 12:22:58.265 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 12:22:58.354 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction -Opening JDBC Connection
+2024-07-22 12:24:50.044 [main] DEBUG org.apache.ibatis.logging.LogFactory -Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2024-07-22 12:24:50.058 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 12:24:50.059 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 12:24:50.059 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 12:24:50.059 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 12:24:50.145 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction -Opening JDBC Connection
+2024-07-22 12:24:50.381 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -Created connection 945834881.
+2024-07-22 12:24:50.384 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction -Setting autocommit to false on JDBC Connection [org.postgresql.jdbc.PgConnection@38604b81]
+2024-07-22 12:24:50.388 [main] DEBUG com.powernode.mybatis.mapper.CarMapper.insert -==>  Preparing: INSERT INTO car VALUES(?, ?, ?, ?, ?)
+2024-07-22 12:24:50.424 [main] DEBUG com.powernode.mybatis.mapper.CarMapper.insert -==> Parameters: 8654(String), 凱美瑞(String), 3.0(Double), 2000-11-11(String), 新能源(String)
+2024-07-22 12:25:34.540 [main] DEBUG org.apache.ibatis.logging.LogFactory -Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2024-07-22 12:25:34.551 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 12:25:34.552 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 12:25:34.552 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 12:25:34.552 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 12:25:34.629 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction -Opening JDBC Connection
+2024-07-22 12:25:34.836 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -Created connection 945834881.
+2024-07-22 12:25:34.837 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction -Setting autocommit to false on JDBC Connection [org.postgresql.jdbc.PgConnection@38604b81]
+2024-07-22 12:25:34.841 [main] DEBUG com.powernode.mybatis.mapper.CarMapper.insert -==>  Preparing: INSERT INTO car(car_num, brand, guide_price, produce_time, car_type) VALUES(?, ?, ?, ?, ?)
+2024-07-22 12:25:34.872 [main] DEBUG com.powernode.mybatis.mapper.CarMapper.insert -==> Parameters: 8654(String), 凱美瑞(String), 3.0(Double), 2000-11-11(String), 新能源(String)
+2024-07-22 12:26:48.229 [main] DEBUG org.apache.ibatis.logging.LogFactory -Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2024-07-22 12:26:48.241 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 12:26:48.242 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 12:26:48.242 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 12:26:48.242 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 12:26:48.323 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction -Opening JDBC Connection
+2024-07-22 12:26:48.562 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -Created connection 1611373863.
+2024-07-22 12:26:48.564 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction -Setting autocommit to false on JDBC Connection [org.postgresql.jdbc.PgConnection@600b9d27]
+2024-07-22 12:26:48.568 [main] DEBUG com.powernode.mybatis.mapper.CarMapper.insert -==>  Preparing: INSERT INTO car(car_num, brand, guide_price, produce_time, car_type) VALUES(?, ?, ?, ?, ?)
+2024-07-22 12:26:48.603 [main] DEBUG com.powernode.mybatis.mapper.CarMapper.insert -==> Parameters: 8654(String), 凱美瑞(String), 3.0(Double), 2000-11-11(String), 新能源(String)
+2024-07-22 12:26:48.615 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction -Rolling back JDBC Connection [org.postgresql.jdbc.PgConnection@600b9d27]
+2024-07-22 12:26:48.616 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction -Resetting autocommit to true on JDBC Connection [org.postgresql.jdbc.PgConnection@600b9d27]
+2024-07-22 12:26:48.616 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction -Closing JDBC Connection [org.postgresql.jdbc.PgConnection@600b9d27]
+2024-07-22 12:26:48.616 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -Returned connection 1611373863 to pool.
+2024-07-22 12:28:09.828 [main] DEBUG org.apache.ibatis.logging.LogFactory -Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2024-07-22 12:28:09.840 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 12:28:09.840 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 12:28:09.840 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 12:28:09.840 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 12:28:09.922 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction -Opening JDBC Connection
+2024-07-22 12:28:10.131 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -Created connection 512456259.
+2024-07-22 12:28:10.132 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction -Setting autocommit to false on JDBC Connection [org.postgresql.jdbc.PgConnection@1e8b7643]
+2024-07-22 12:28:10.136 [main] DEBUG com.powernode.mybatis.mapper.CarMapper.insert -==>  Preparing: INSERT INTO car(car_num, brand, guide_price, produce_time, car_type) VALUES(?, ?, ?, ?, ?)
+2024-07-22 12:28:10.168 [main] DEBUG com.powernode.mybatis.mapper.CarMapper.insert -==> Parameters: 8654(String), 凱美瑞(String), 3.0(Double), 2000-11-11(String), 新能源(String)
+2024-07-22 12:28:10.172 [main] DEBUG com.powernode.mybatis.mapper.CarMapper.insert -<==    Updates: 1
+2024-07-22 12:28:10.175 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction -Committing JDBC Connection [org.postgresql.jdbc.PgConnection@1e8b7643]
+2024-07-22 12:28:10.190 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction -Resetting autocommit to true on JDBC Connection [org.postgresql.jdbc.PgConnection@1e8b7643]
+2024-07-22 12:28:10.190 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction -Closing JDBC Connection [org.postgresql.jdbc.PgConnection@1e8b7643]
+2024-07-22 12:28:10.191 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -Returned connection 512456259 to pool.
+2024-07-22 12:32:11.381 [main] DEBUG org.apache.ibatis.logging.LogFactory -Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2024-07-22 12:32:11.392 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 12:32:11.392 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 12:32:11.392 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 12:32:11.392 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 12:32:11.474 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction -Opening JDBC Connection
+2024-07-22 12:32:11.685 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -Created connection 195801026.
+2024-07-22 12:32:11.686 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction -Setting autocommit to false on JDBC Connection [org.postgresql.jdbc.PgConnection@babafc2]
+2024-07-22 12:32:11.690 [main] DEBUG com.powernode.mybatis.mapper.CarMapper.deleteById -==>  Preparing: DELETE FROM car WHERE id = ?
+2024-07-22 12:32:11.722 [main] DEBUG com.powernode.mybatis.mapper.CarMapper.deleteById -==> Parameters: 1(Integer)
+2024-07-22 12:32:11.725 [main] DEBUG com.powernode.mybatis.mapper.CarMapper.deleteById -<==    Updates: 1
+2024-07-22 12:32:11.728 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction -Committing JDBC Connection [org.postgresql.jdbc.PgConnection@babafc2]
+2024-07-22 12:32:11.742 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction -Resetting autocommit to true on JDBC Connection [org.postgresql.jdbc.PgConnection@babafc2]
+2024-07-22 12:32:11.742 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction -Closing JDBC Connection [org.postgresql.jdbc.PgConnection@babafc2]
+2024-07-22 12:32:11.743 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -Returned connection 195801026 to pool.
+2024-07-22 12:32:24.534 [main] DEBUG org.apache.ibatis.logging.LogFactory -Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2024-07-22 12:32:24.545 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 12:32:24.546 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 12:32:24.546 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 12:32:24.547 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 12:32:24.626 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction -Opening JDBC Connection
+2024-07-22 12:32:24.896 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -Created connection 2108297149.
+2024-07-22 12:32:24.898 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction -Setting autocommit to false on JDBC Connection [org.postgresql.jdbc.PgConnection@7daa0fbd]
+2024-07-22 12:32:24.904 [main] DEBUG com.powernode.mybatis.mapper.CarMapper.insert -==>  Preparing: INSERT INTO car(car_num, brand, guide_price, produce_time, car_type) VALUES(?, ?, ?, ?, ?)
+2024-07-22 12:32:24.948 [main] DEBUG com.powernode.mybatis.mapper.CarMapper.insert -==> Parameters: 8654(String), 凱美瑞(String), 3.0(Double), 2000-11-11(String), 新能源(String)
+2024-07-22 12:32:24.952 [main] DEBUG com.powernode.mybatis.mapper.CarMapper.insert -<==    Updates: 1
+2024-07-22 12:32:24.956 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction -Committing JDBC Connection [org.postgresql.jdbc.PgConnection@7daa0fbd]
+2024-07-22 12:32:24.960 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction -Resetting autocommit to true on JDBC Connection [org.postgresql.jdbc.PgConnection@7daa0fbd]
+2024-07-22 12:32:24.960 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction -Closing JDBC Connection [org.postgresql.jdbc.PgConnection@7daa0fbd]
+2024-07-22 12:32:24.960 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -Returned connection 2108297149 to pool.
+2024-07-22 12:33:33.004 [main] DEBUG org.apache.ibatis.logging.LogFactory -Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2024-07-22 12:33:33.017 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 12:33:33.018 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 12:33:33.018 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 12:33:33.018 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 12:33:33.098 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction -Opening JDBC Connection
+2024-07-22 12:33:33.613 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -Created connection 512456259.
+2024-07-22 12:33:33.614 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction -Setting autocommit to false on JDBC Connection [org.postgresql.jdbc.PgConnection@1e8b7643]
+2024-07-22 12:33:33.617 [main] DEBUG com.powernode.mybatis.mapper.CarMapper.update -==>  Preparing: UPDATE car SET car_num=?, brand=?, guide_price=?, produce_time=?, car_type=? WHERE id = ?
+2024-07-22 12:33:33.644 [main] DEBUG com.powernode.mybatis.mapper.CarMapper.update -==> Parameters: 8655(String), 凱美瑞1(String), 3.0(Double), 2000-11-11(String), 新能源(String), null
+2024-07-22 12:33:33.647 [main] DEBUG com.powernode.mybatis.mapper.CarMapper.update -<==    Updates: 0
+2024-07-22 12:33:33.649 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction -Committing JDBC Connection [org.postgresql.jdbc.PgConnection@1e8b7643]
+2024-07-22 12:33:33.651 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction -Resetting autocommit to true on JDBC Connection [org.postgresql.jdbc.PgConnection@1e8b7643]
+2024-07-22 12:33:33.651 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction -Closing JDBC Connection [org.postgresql.jdbc.PgConnection@1e8b7643]
+2024-07-22 12:33:33.651 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -Returned connection 512456259 to pool.
+2024-07-22 12:33:54.671 [main] DEBUG org.apache.ibatis.logging.LogFactory -Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2024-07-22 12:33:54.682 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 12:33:54.682 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 12:33:54.682 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 12:33:54.683 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 12:33:54.766 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction -Opening JDBC Connection
+2024-07-22 12:33:55.002 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -Created connection 1165791284.
+2024-07-22 12:33:55.004 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction -Setting autocommit to false on JDBC Connection [org.postgresql.jdbc.PgConnection@457c9034]
+2024-07-22 12:33:55.008 [main] DEBUG com.powernode.mybatis.mapper.CarMapper.update -==>  Preparing: UPDATE car SET car_num=?, brand=?, guide_price=?, produce_time=?, car_type=? WHERE id = ?
+2024-07-22 12:33:55.041 [main] DEBUG com.powernode.mybatis.mapper.CarMapper.update -==> Parameters: 8655(String), 凱美瑞1(String), 3.0(Double), 2000-11-11(String), 新能源(String), 2(Integer)
+2024-07-22 12:33:55.047 [main] DEBUG com.powernode.mybatis.mapper.CarMapper.update -<==    Updates: 1
+2024-07-22 12:33:55.050 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction -Committing JDBC Connection [org.postgresql.jdbc.PgConnection@457c9034]
+2024-07-22 12:33:55.065 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction -Resetting autocommit to true on JDBC Connection [org.postgresql.jdbc.PgConnection@457c9034]
+2024-07-22 12:33:55.065 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction -Closing JDBC Connection [org.postgresql.jdbc.PgConnection@457c9034]
+2024-07-22 12:33:55.065 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -Returned connection 1165791284 to pool.
+2024-07-22 12:35:51.943 [main] DEBUG org.apache.ibatis.logging.LogFactory -Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2024-07-22 12:35:51.955 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 12:35:51.955 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 12:35:51.955 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 12:35:51.956 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 12:35:52.039 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction -Opening JDBC Connection
+2024-07-22 12:35:52.270 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -Created connection 1364497552.
+2024-07-22 12:35:52.271 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction -Setting autocommit to false on JDBC Connection [org.postgresql.jdbc.PgConnection@51549490]
+2024-07-22 12:35:52.275 [main] DEBUG com.powernode.mybatis.mapper.CarMapper.selectById -==>  Preparing: SELECT id, car_num as carNum, brand, guide_price as guidePrice, produce_time as produceTime, car_type as carType FROM car WHERE id = ?
+2024-07-22 12:35:52.304 [main] DEBUG com.powernode.mybatis.mapper.CarMapper.selectById -==> Parameters: 2(Integer)
+2024-07-22 12:35:52.349 [main] DEBUG com.powernode.mybatis.mapper.CarMapper.selectById -<==      Total: 1
+2024-07-22 12:35:52.354 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction -Resetting autocommit to true on JDBC Connection [org.postgresql.jdbc.PgConnection@51549490]
+2024-07-22 12:35:52.356 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction -Closing JDBC Connection [org.postgresql.jdbc.PgConnection@51549490]
+2024-07-22 12:35:52.356 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -Returned connection 1364497552 to pool.
+2024-07-22 12:36:01.850 [main] DEBUG org.apache.ibatis.logging.LogFactory -Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2024-07-22 12:36:01.861 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 12:36:01.861 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 12:36:01.861 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 12:36:01.861 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 12:36:01.941 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction -Opening JDBC Connection
+2024-07-22 12:36:02.157 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -Created connection 916835004.
+2024-07-22 12:36:02.159 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction -Setting autocommit to false on JDBC Connection [org.postgresql.jdbc.PgConnection@36a5cabc]
+2024-07-22 12:36:02.163 [main] DEBUG com.powernode.mybatis.mapper.CarMapper.selectById -==>  Preparing: SELECT id, car_num as carNum, brand, guide_price as guidePrice, produce_time as produceTime, car_type as carType FROM car WHERE id = ?
+2024-07-22 12:36:02.192 [main] DEBUG com.powernode.mybatis.mapper.CarMapper.selectById -==> Parameters: 2(Integer)
+2024-07-22 12:36:02.223 [main] DEBUG com.powernode.mybatis.mapper.CarMapper.selectById -<==      Total: 1
+2024-07-22 12:36:02.227 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction -Resetting autocommit to true on JDBC Connection [org.postgresql.jdbc.PgConnection@36a5cabc]
+2024-07-22 12:36:02.229 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction -Closing JDBC Connection [org.postgresql.jdbc.PgConnection@36a5cabc]
+2024-07-22 12:36:02.229 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -Returned connection 916835004 to pool.
+2024-07-22 12:36:17.220 [main] DEBUG org.apache.ibatis.logging.LogFactory -Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2024-07-22 12:36:17.232 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 12:36:17.232 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 12:36:17.232 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 12:36:17.232 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 12:36:17.317 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction -Opening JDBC Connection
+2024-07-22 12:36:17.543 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -Created connection 1866768727.
+2024-07-22 12:36:17.544 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction -Setting autocommit to false on JDBC Connection [org.postgresql.jdbc.PgConnection@6f44a157]
+2024-07-22 12:36:17.547 [main] DEBUG com.powernode.mybatis.mapper.CarMapper.selectById -==>  Preparing: SELECT id, car_num as carNum, brand, guide_price as guidePrice, produce_time as produceTime, car_type as carType FROM car WHERE id = ?
+2024-07-22 12:36:17.573 [main] DEBUG com.powernode.mybatis.mapper.CarMapper.selectById -==> Parameters: 2(Integer)
+2024-07-22 12:36:17.601 [main] DEBUG com.powernode.mybatis.mapper.CarMapper.selectById -<==      Total: 1
+2024-07-22 12:36:17.606 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction -Resetting autocommit to true on JDBC Connection [org.postgresql.jdbc.PgConnection@6f44a157]
+2024-07-22 12:36:17.607 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction -Closing JDBC Connection [org.postgresql.jdbc.PgConnection@6f44a157]
+2024-07-22 12:36:17.607 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -Returned connection 1866768727 to pool.
+2024-07-22 12:37:11.111 [main] DEBUG org.apache.ibatis.logging.LogFactory -Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2024-07-22 12:37:11.122 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 12:37:11.123 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 12:37:11.123 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 12:37:11.123 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 12:37:11.199 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction -Opening JDBC Connection
+2024-07-22 12:37:11.412 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -Created connection 878668275.
+2024-07-22 12:37:11.414 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction -Setting autocommit to false on JDBC Connection [org.postgresql.jdbc.PgConnection@345f69f3]
+2024-07-22 12:37:11.420 [main] DEBUG com.powernode.mybatis.mapper.CarMapper.selectAll -==>  Preparing: SELECT id, car_num as carNum, brand, guide_price as guidePrice, produce_time as produceTime, car_type as carType FROM car
+2024-07-22 12:37:11.453 [main] DEBUG com.powernode.mybatis.mapper.CarMapper.selectAll -==> Parameters: 
+2024-07-22 12:37:11.489 [main] DEBUG com.powernode.mybatis.mapper.CarMapper.selectAll -<==      Total: 1
+2024-07-22 12:37:11.495 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction -Resetting autocommit to true on JDBC Connection [org.postgresql.jdbc.PgConnection@345f69f3]
+2024-07-22 12:37:11.497 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction -Closing JDBC Connection [org.postgresql.jdbc.PgConnection@345f69f3]
+2024-07-22 12:37:11.497 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -Returned connection 878668275 to pool.
+2024-07-22 12:37:20.325 [main] DEBUG org.apache.ibatis.logging.LogFactory -Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2024-07-22 12:37:20.336 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 12:37:20.337 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 12:37:20.337 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 12:37:20.337 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 12:37:20.419 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction -Opening JDBC Connection
+2024-07-22 12:37:20.652 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -Created connection 945834881.
+2024-07-22 12:37:20.653 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction -Setting autocommit to false on JDBC Connection [org.postgresql.jdbc.PgConnection@38604b81]
+2024-07-22 12:37:20.658 [main] DEBUG com.powernode.mybatis.mapper.CarMapper.insert -==>  Preparing: INSERT INTO car(car_num, brand, guide_price, produce_time, car_type) VALUES(?, ?, ?, ?, ?)
+2024-07-22 12:37:20.699 [main] DEBUG com.powernode.mybatis.mapper.CarMapper.insert -==> Parameters: 8654(String), 凱美瑞(String), 3.0(Double), 2000-11-11(String), 新能源(String)
+2024-07-22 12:37:20.704 [main] DEBUG com.powernode.mybatis.mapper.CarMapper.insert -<==    Updates: 1
+2024-07-22 12:37:20.707 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction -Committing JDBC Connection [org.postgresql.jdbc.PgConnection@38604b81]
+2024-07-22 12:37:20.711 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction -Resetting autocommit to true on JDBC Connection [org.postgresql.jdbc.PgConnection@38604b81]
+2024-07-22 12:37:20.711 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction -Closing JDBC Connection [org.postgresql.jdbc.PgConnection@38604b81]
+2024-07-22 12:37:20.711 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -Returned connection 945834881 to pool.
+2024-07-22 12:37:26.829 [main] DEBUG org.apache.ibatis.logging.LogFactory -Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2024-07-22 12:37:26.840 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 12:37:26.841 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 12:37:26.841 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 12:37:26.841 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 12:37:26.924 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction -Opening JDBC Connection
+2024-07-22 12:37:27.159 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -Created connection 1911155630.
+2024-07-22 12:37:27.160 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction -Setting autocommit to false on JDBC Connection [org.postgresql.jdbc.PgConnection@71e9ebae]
+2024-07-22 12:37:27.165 [main] DEBUG com.powernode.mybatis.mapper.CarMapper.selectAll -==>  Preparing: SELECT id, car_num as carNum, brand, guide_price as guidePrice, produce_time as produceTime, car_type as carType FROM car
+2024-07-22 12:37:27.206 [main] DEBUG com.powernode.mybatis.mapper.CarMapper.selectAll -==> Parameters: 
+2024-07-22 12:37:27.237 [main] DEBUG com.powernode.mybatis.mapper.CarMapper.selectAll -<==      Total: 2
+2024-07-22 12:37:27.242 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction -Resetting autocommit to true on JDBC Connection [org.postgresql.jdbc.PgConnection@71e9ebae]
+2024-07-22 12:37:27.244 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction -Closing JDBC Connection [org.postgresql.jdbc.PgConnection@71e9ebae]
+2024-07-22 12:37:27.244 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -Returned connection 1911155630 to pool.
