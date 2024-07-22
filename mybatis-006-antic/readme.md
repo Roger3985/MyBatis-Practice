@@ -42,4 +42,4 @@ org.apache.ibatis.exceptions.PersistenceException:
    假設今天是 20220901，那麼直接查 t_log_20220901 的表即可。
 
 3. 批量刪除: 一次刪除多條紀錄。
-   <img width="70" height="70" src="picture/img.png" alt="Spring boot">
+   <img width="70" height="70" src="img.png" alt="Spring boot">
