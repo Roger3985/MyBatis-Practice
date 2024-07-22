@@ -7,9 +7,46 @@ import org.junit.Test;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class StudentMapperTest {
+
+    @Test
+    public void testInsertStudentByPOJO() {
+        SqlSession sqlSession = SqlSessionUtil.openSession();
+        StudentMapper mapper = sqlSession.getMapper(StudentMapper.class);
+
+        // POJO 物件
+        Student student = new Student();
+        student.setName("張飛");
+        student.setAge(50);
+        student.setSex('女');
+        student.setBirth(new Date());
+        student.setHeight(10.0);
+
+        // 插入 POJO
+        int count = mapper.insertStudentByPOJO(student);
+        System.out.println(count);
+        sqlSession.commit();
+        sqlSession.close();
+    }
+
+    @Test
+    public void testInsertStudentByMap() {
+        SqlSession sqlSession = SqlSessionUtil.openSession();
+        StudentMapper mapper = sqlSession.getMapper(StudentMapper.class);
+        Map<String, Object> map = new HashMap<>();
+        map.put("姓名", "趙六");
+        map.put("年齡", 20);
+        map.put("身高", 1.81);
+        map.put("性別", '男');
+        map.put("生日", new Date());
+        int count = mapper.insertStudentByMap(map);
+        sqlSession.commit();
+        sqlSession.close();
+    }
 
     @Test
     public void testSelectById() {
@@ -50,4 +87,6 @@ public class StudentMapperTest {
         students.forEach(student -> System.out.println(student));
         sqlSession.close();
     }
+
+
 }
