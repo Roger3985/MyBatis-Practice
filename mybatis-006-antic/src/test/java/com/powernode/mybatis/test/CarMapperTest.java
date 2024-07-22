@@ -11,6 +11,15 @@ import java.util.List;
 public class CarMapperTest {
 
     @Test
+    public void testDeleteBatch() {
+        SqlSession sqlSession = SqlSessionUtil.openSession();
+        CarMapper mapper = sqlSession.getMapper(CarMapper.class);
+        int count = mapper.deleteBatch("2, 3");
+        sqlSession.commit();
+        sqlSession.close();
+    }
+
+    @Test
     public void testSelectByCarType() {
         SqlSession sqlSession = SqlSessionUtil.openSession();
         // mapper 實際上就是 daoImpl 實現類物件。

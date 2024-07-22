@@ -42,4 +42,22 @@ org.apache.ibatis.exceptions.PersistenceException:
    假設今天是 20220901，那麼直接查 t_log_20220901 的表即可。
 
 3. 批量刪除: 一次刪除多條紀錄。
-   <img width="70" height="70" src="img.png" alt="Spring boot">
+   批量刪除的 SQL 語句有兩種寫法:
+   (1) or: delete from car where id = 1 or id = 2 or id = 3;
+   (2) int: delete from car where id in(1, 2, 3);
+
+   應該採用 ${} 的方式
+   * delete from car where id in(${ids});
+
+4. 模糊查詢: like
+   需求: 根據汽車品牌進行模糊查詢
+   SQL: select * from car where brand like '%比亞迪%';
+   第一種解決方案:
+        '%${brand}'
+   第二種解決方案:
+        concat 函數，這是一個 mysql 資料庫當中的一個函數，專門進行字符串拚接。
+        concat('%', #{}, '%'}
+   第三種解決方案:
+        brand like concat('%', '${brand}', '%')
+   第四種解決方式:
+        "%"#{brand}"%"
