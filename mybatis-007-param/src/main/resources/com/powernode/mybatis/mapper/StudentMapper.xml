@@ -4,6 +4,50 @@
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.powernode.mybatis.mapper.StudentMapper">
 
+    <select id="selectByNameAndSex2" resultType="student" parameterType="student">
+        <!-- 使用了 @Param 註解後，arg0 和 arg1 失效了  -->
+        <!-- SELECT *
+        FROM student
+        WHERE name = #{arg0}
+        AND sex = #{arg1} -->
+        <!-- 使用了 @Param 註解後，param1 和 param2 還可以使用  -->
+        <!-- SELECT *
+        FROM student
+        WHERE name = #{param1}
+        AND sex = #{param2} -->
+        SELECT *
+        FROM student
+        WHERE name = #{name}
+        AND sex = #{sex}
+    </select>
+
+    <!--
+        注意：低版本的 mybatis 中，使用的是：#{0} 和 #{1}，以及 #{2}
+        高版本 mybatis 中，使用的是：
+            #{arg0}
+            #{arg1}
+            #{arg2}
+            #{arg3}
+            #{arg4}
+
+            #{param1}
+            #{param2}
+            #{param3}
+            #{param4}
+     -->
+
+    <select id="selectByNameAndSex" resultType="student">
+        <!-- select * from student where name = #{arg0} and sex = #{arg1} -->
+        <!-- SELECT *
+        FROM student
+        WHERE name = #{arg0}
+        AND sex = #{arg1} -->
+        SELECT *
+        FROM student
+        WHERE name = #{param1}
+        AND sex = #{param2}
+    </select>
+
     <insert id="insertStudentByPOJO" parameterType="student">
         INSERT INTO student(name, age, sex, birth, height)
         VALUES(#{name}, #{age}, #{sex}, #{birth}, #{height})

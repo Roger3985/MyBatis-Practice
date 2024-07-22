@@ -11,7 +11,36 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * 代理模式：
+ *      1. 代理物件 鏈家
+ *      2. 代理方法 找方法
+ *      3. 目標物件 我
+ *      4. 目標方法 找房子
+ */
 public class StudentMapperTest {
+
+    @Test
+    public void testSelectByNameAndSex2() {
+        SqlSession sqlSession = SqlSessionUtil.openSession();
+        // mapper 實際上指向了代理物件
+        StudentMapper mapper = sqlSession.getMapper(StudentMapper.class);
+        // mapper 是代理物件
+        // selectByNameAndSex2 是代理方法
+        List<Student> students = mapper.selectByNameAndSex2("張飛", '男');
+        students.forEach(student -> System.out.println(student));
+        sqlSession.close();
+    }
+
+    @Test
+    public void testSelectByNameAndSex() {
+        SqlSession sqlSession = SqlSessionUtil.openSession();
+        StudentMapper mapper = sqlSession.getMapper(StudentMapper.class);
+        List<Student> students = mapper.selectByNameAndSex("張飛", '男');
+        students.forEach(student -> System.out.println(student));
+        sqlSession.close();
+    }
+
 
     @Test
     public void testInsertStudentByPOJO() {
