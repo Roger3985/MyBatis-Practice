@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.powernode.mybatis.mapper.StudentMapper">
+    <!--
+        List<Student> selectById(Integer id);
+        List<Student> selectByName(String name);
+        List<Student> selectByBirth(Date birth);
+        List<Student> selectBySex(Character sex);
+
+        paramterType 屬性的作用：
+            -> 告訴 mybatis 框架，我這個方法的參數類型是什麼類型。
+               mybatis 框架自身帶有類型推斷機制，所以大部分情況下 parameterType 屬性都是可以省略不寫的。
+
+        SQL 語句最後是這樣的：
+            -> select * from student where id = ?
+        JDBC 程式碼一定要給 ? 傳值的。
+        怎麼傳值？ ps.setXxx(第幾個問號，傳什麼值);
+            ps.setInteger(1, 1)
+            ps.setString
+            ps.setData
+            ps.setInt
+            .......
+        mybatis 底層到底調用 setXxx 的哪個方法，取決於 parameterType 屬性的值。
+
+        注意：mybatis 框架實際上內置了很多的別名，可以參考開發手冊。
+    -->
+    <select id="selectById" resultType="student" parameterType="java.lang.Integer">
+        SELECT *
+        FROM student
+        WHERE id = #{id}
+    </select>
+
+    <select id="selectByName" resultType="student" parameterType="java.lang.String">
+        SELECT *
+        FROM student
+        WHERE name = #{name, javaType=String, jdbcType=VARCHAR}
+    </select>
+
+    <select id="selectByBirth" resultType="student" parameterType="java.util.Date">
+        SELECT *
+        FROM student
+        WHERE birth = #{birth}
+    </select>
+
+    <select id="selectBySex" resultType="student" parameterType="java.lang.Character">
+        SELECT *
+        FROM student
+        WHERE sex = #{sex}
+    </select>
+</mapper>

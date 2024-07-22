@@ -7,6 +7,13 @@ import java.util.List;
 public interface CarMapper {
 
     /**
+     * 插入 Car 訊息，並且使用生成的主鍵值
+     * @param car
+     * @return
+     */
+    int insertCarUseGeneratedKeys(Car car);
+
+    /**
      * 批量刪除根據 id
      */
     int deleteBatch(String ids);

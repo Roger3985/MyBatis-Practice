@@ -5,6 +5,15 @@
 <!-- namespace 不能使用別名機制，必須寫全限定介面名稱，帶有包名的。 -->
 <mapper namespace="com.powernode.mybatis.mapper.CarMapper">
 
+    <!--
+        useGeneratedKeys="true" 使用自動生成的主鍵值。
+        keyProperty="id" 指定主鍵值賦值給物件的哪個屬性。這個就表示將主鍵值賦值給 Car 物件的 id 屬性。
+     -->
+    <insert id="insertCarUseGeneratedKeys" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO car(car_num, brand, guide_price, produce_time, car_type)
+        VALUES(#{carNum}, #{brand}, #{guidePrice}, #{produceTime}, #{carType})
+    </insert>
+
     <delete id="deleteBatch">
         DELETE FROM car WHERE id in(${ids})
     </delete>

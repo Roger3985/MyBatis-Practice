@@ -61,3 +61,262 @@
 2024-07-22 14:22:29.014 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction -Resetting autocommit to true on JDBC Connection [org.postgresql.jdbc.PgConnection@1869fbd2]
 2024-07-22 14:22:29.014 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction -Closing JDBC Connection [org.postgresql.jdbc.PgConnection@1869fbd2]
 2024-07-22 14:22:29.014 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -Returned connection 409598930 to pool.
+2024-07-22 21:14:36.106 [main] DEBUG org.apache.ibatis.logging.LogFactory -Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2024-07-22 21:14:36.108 [main] DEBUG org.apache.ibatis.io.VFS -Class not found: org.jboss.vfs.VFS
+2024-07-22 21:14:36.108 [main] DEBUG org.apache.ibatis.io.JBoss6VFS -JBoss 6 VFS API is not available in this environment.
+2024-07-22 21:14:36.108 [main] DEBUG org.apache.ibatis.io.VFS -Class not found: org.jboss.vfs.VirtualFile
+2024-07-22 21:14:36.109 [main] DEBUG org.apache.ibatis.io.VFS -VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+2024-07-22 21:14:36.109 [main] DEBUG org.apache.ibatis.io.VFS -Using VFS adapter org.apache.ibatis.io.DefaultVFS
+2024-07-22 21:14:36.109 [main] DEBUG org.apache.ibatis.io.DefaultVFS -Find JAR URL: file:/Users/sunzhengchang/mybatis/mybatis-006-antic/target/classes/com/powernode/mybatis/pojo
+2024-07-22 21:14:36.109 [main] DEBUG org.apache.ibatis.io.DefaultVFS -Not a JAR: file:/Users/sunzhengchang/mybatis/mybatis-006-antic/target/classes/com/powernode/mybatis/pojo
+2024-07-22 21:14:36.139 [main] DEBUG org.apache.ibatis.io.DefaultVFS -Reader entry: Car.class
+2024-07-22 21:14:36.140 [main] DEBUG org.apache.ibatis.io.DefaultVFS -Listing file:/Users/sunzhengchang/mybatis/mybatis-006-antic/target/classes/com/powernode/mybatis/pojo
+2024-07-22 21:14:36.140 [main] DEBUG org.apache.ibatis.io.DefaultVFS -Find JAR URL: file:/Users/sunzhengchang/mybatis/mybatis-006-antic/target/classes/com/powernode/mybatis/pojo/Car.class
+2024-07-22 21:14:36.140 [main] DEBUG org.apache.ibatis.io.DefaultVFS -Not a JAR: file:/Users/sunzhengchang/mybatis/mybatis-006-antic/target/classes/com/powernode/mybatis/pojo/Car.class
+2024-07-22 21:14:36.140 [main] DEBUG org.apache.ibatis.io.DefaultVFS -Reader entry: ����   A L
+2024-07-22 21:14:36.141 [main] DEBUG org.apache.ibatis.io.ResolverUtil -Checking to see if class com.powernode.mybatis.pojo.Car matches criteria [is assignable to Object]
+2024-07-22 21:14:36.161 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 21:14:36.161 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 21:14:36.161 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 21:14:36.161 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 21:15:04.606 [main] DEBUG org.apache.ibatis.logging.LogFactory -Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2024-07-22 21:15:04.609 [main] DEBUG org.apache.ibatis.io.VFS -Class not found: org.jboss.vfs.VFS
+2024-07-22 21:15:04.609 [main] DEBUG org.apache.ibatis.io.JBoss6VFS -JBoss 6 VFS API is not available in this environment.
+2024-07-22 21:15:04.609 [main] DEBUG org.apache.ibatis.io.VFS -Class not found: org.jboss.vfs.VirtualFile
+2024-07-22 21:15:04.609 [main] DEBUG org.apache.ibatis.io.VFS -VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+2024-07-22 21:15:04.609 [main] DEBUG org.apache.ibatis.io.VFS -Using VFS adapter org.apache.ibatis.io.DefaultVFS
+2024-07-22 21:15:04.610 [main] DEBUG org.apache.ibatis.io.DefaultVFS -Find JAR URL: file:/Users/sunzhengchang/mybatis/mybatis-006-antic/target/classes/com/powernode/mybatis/pojo
+2024-07-22 21:15:04.610 [main] DEBUG org.apache.ibatis.io.DefaultVFS -Not a JAR: file:/Users/sunzhengchang/mybatis/mybatis-006-antic/target/classes/com/powernode/mybatis/pojo
+2024-07-22 21:15:04.634 [main] DEBUG org.apache.ibatis.io.DefaultVFS -Reader entry: Car.class
+2024-07-22 21:15:04.634 [main] DEBUG org.apache.ibatis.io.DefaultVFS -Listing file:/Users/sunzhengchang/mybatis/mybatis-006-antic/target/classes/com/powernode/mybatis/pojo
+2024-07-22 21:15:04.635 [main] DEBUG org.apache.ibatis.io.DefaultVFS -Find JAR URL: file:/Users/sunzhengchang/mybatis/mybatis-006-antic/target/classes/com/powernode/mybatis/pojo/Car.class
+2024-07-22 21:15:04.635 [main] DEBUG org.apache.ibatis.io.DefaultVFS -Not a JAR: file:/Users/sunzhengchang/mybatis/mybatis-006-antic/target/classes/com/powernode/mybatis/pojo/Car.class
+2024-07-22 21:15:04.635 [main] DEBUG org.apache.ibatis.io.DefaultVFS -Reader entry: ����   A L
+2024-07-22 21:15:04.636 [main] DEBUG org.apache.ibatis.io.ResolverUtil -Checking to see if class com.powernode.mybatis.pojo.Car matches criteria [is assignable to Object]
+2024-07-22 21:15:04.652 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 21:15:04.653 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 21:15:04.653 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 21:15:04.653 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 21:15:34.159 [main] DEBUG org.apache.ibatis.logging.LogFactory -Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2024-07-22 21:15:34.162 [main] DEBUG org.apache.ibatis.io.VFS -Class not found: org.jboss.vfs.VFS
+2024-07-22 21:15:34.162 [main] DEBUG org.apache.ibatis.io.JBoss6VFS -JBoss 6 VFS API is not available in this environment.
+2024-07-22 21:15:34.162 [main] DEBUG org.apache.ibatis.io.VFS -Class not found: org.jboss.vfs.VirtualFile
+2024-07-22 21:15:34.162 [main] DEBUG org.apache.ibatis.io.VFS -VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+2024-07-22 21:15:34.162 [main] DEBUG org.apache.ibatis.io.VFS -Using VFS adapter org.apache.ibatis.io.DefaultVFS
+2024-07-22 21:15:34.163 [main] DEBUG org.apache.ibatis.io.DefaultVFS -Find JAR URL: file:/Users/sunzhengchang/mybatis/mybatis-006-antic/target/classes/com/powernode/mybatis/pojo
+2024-07-22 21:15:34.163 [main] DEBUG org.apache.ibatis.io.DefaultVFS -Not a JAR: file:/Users/sunzhengchang/mybatis/mybatis-006-antic/target/classes/com/powernode/mybatis/pojo
+2024-07-22 21:15:34.188 [main] DEBUG org.apache.ibatis.io.DefaultVFS -Reader entry: Car.class
+2024-07-22 21:15:34.188 [main] DEBUG org.apache.ibatis.io.DefaultVFS -Listing file:/Users/sunzhengchang/mybatis/mybatis-006-antic/target/classes/com/powernode/mybatis/pojo
+2024-07-22 21:15:34.188 [main] DEBUG org.apache.ibatis.io.DefaultVFS -Find JAR URL: file:/Users/sunzhengchang/mybatis/mybatis-006-antic/target/classes/com/powernode/mybatis/pojo/Car.class
+2024-07-22 21:15:34.188 [main] DEBUG org.apache.ibatis.io.DefaultVFS -Not a JAR: file:/Users/sunzhengchang/mybatis/mybatis-006-antic/target/classes/com/powernode/mybatis/pojo/Car.class
+2024-07-22 21:15:34.189 [main] DEBUG org.apache.ibatis.io.DefaultVFS -Reader entry: ����   A L
+2024-07-22 21:15:34.189 [main] DEBUG org.apache.ibatis.io.ResolverUtil -Checking to see if class com.powernode.mybatis.pojo.Car matches criteria [is assignable to Object]
+2024-07-22 21:15:34.208 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 21:15:34.208 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 21:15:34.208 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 21:15:34.208 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 21:15:46.675 [main] DEBUG org.apache.ibatis.logging.LogFactory -Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2024-07-22 21:15:46.677 [main] DEBUG org.apache.ibatis.io.VFS -Class not found: org.jboss.vfs.VFS
+2024-07-22 21:15:46.677 [main] DEBUG org.apache.ibatis.io.JBoss6VFS -JBoss 6 VFS API is not available in this environment.
+2024-07-22 21:15:46.677 [main] DEBUG org.apache.ibatis.io.VFS -Class not found: org.jboss.vfs.VirtualFile
+2024-07-22 21:15:46.678 [main] DEBUG org.apache.ibatis.io.VFS -VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+2024-07-22 21:15:46.678 [main] DEBUG org.apache.ibatis.io.VFS -Using VFS adapter org.apache.ibatis.io.DefaultVFS
+2024-07-22 21:15:46.678 [main] DEBUG org.apache.ibatis.io.DefaultVFS -Find JAR URL: file:/Users/sunzhengchang/mybatis/mybatis-006-antic/target/classes/com/powernode/mybatis/pojo
+2024-07-22 21:15:46.678 [main] DEBUG org.apache.ibatis.io.DefaultVFS -Not a JAR: file:/Users/sunzhengchang/mybatis/mybatis-006-antic/target/classes/com/powernode/mybatis/pojo
+2024-07-22 21:15:46.703 [main] DEBUG org.apache.ibatis.io.DefaultVFS -Reader entry: Car.class
+2024-07-22 21:15:46.703 [main] DEBUG org.apache.ibatis.io.DefaultVFS -Listing file:/Users/sunzhengchang/mybatis/mybatis-006-antic/target/classes/com/powernode/mybatis/pojo
+2024-07-22 21:15:46.703 [main] DEBUG org.apache.ibatis.io.DefaultVFS -Find JAR URL: file:/Users/sunzhengchang/mybatis/mybatis-006-antic/target/classes/com/powernode/mybatis/pojo/Car.class
+2024-07-22 21:15:46.703 [main] DEBUG org.apache.ibatis.io.DefaultVFS -Not a JAR: file:/Users/sunzhengchang/mybatis/mybatis-006-antic/target/classes/com/powernode/mybatis/pojo/Car.class
+2024-07-22 21:15:46.704 [main] DEBUG org.apache.ibatis.io.DefaultVFS -Reader entry: ����   A L
+2024-07-22 21:15:46.704 [main] DEBUG org.apache.ibatis.io.ResolverUtil -Checking to see if class com.powernode.mybatis.pojo.Car matches criteria [is assignable to Object]
+2024-07-22 21:15:46.723 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 21:15:46.723 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 21:15:46.723 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 21:15:46.723 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 21:16:17.920 [main] DEBUG org.apache.ibatis.logging.LogFactory -Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2024-07-22 21:16:17.922 [main] DEBUG org.apache.ibatis.io.VFS -Class not found: org.jboss.vfs.VFS
+2024-07-22 21:16:17.922 [main] DEBUG org.apache.ibatis.io.JBoss6VFS -JBoss 6 VFS API is not available in this environment.
+2024-07-22 21:16:17.922 [main] DEBUG org.apache.ibatis.io.VFS -Class not found: org.jboss.vfs.VirtualFile
+2024-07-22 21:16:17.922 [main] DEBUG org.apache.ibatis.io.VFS -VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+2024-07-22 21:16:17.923 [main] DEBUG org.apache.ibatis.io.VFS -Using VFS adapter org.apache.ibatis.io.DefaultVFS
+2024-07-22 21:16:17.923 [main] DEBUG org.apache.ibatis.io.DefaultVFS -Find JAR URL: file:/Users/sunzhengchang/mybatis/mybatis-006-antic/target/classes/com/powernode/mybatis/pojo
+2024-07-22 21:16:17.923 [main] DEBUG org.apache.ibatis.io.DefaultVFS -Not a JAR: file:/Users/sunzhengchang/mybatis/mybatis-006-antic/target/classes/com/powernode/mybatis/pojo
+2024-07-22 21:16:17.951 [main] DEBUG org.apache.ibatis.io.DefaultVFS -Reader entry: Car.class
+2024-07-22 21:16:17.952 [main] DEBUG org.apache.ibatis.io.DefaultVFS -Listing file:/Users/sunzhengchang/mybatis/mybatis-006-antic/target/classes/com/powernode/mybatis/pojo
+2024-07-22 21:16:17.952 [main] DEBUG org.apache.ibatis.io.DefaultVFS -Find JAR URL: file:/Users/sunzhengchang/mybatis/mybatis-006-antic/target/classes/com/powernode/mybatis/pojo/Car.class
+2024-07-22 21:16:17.952 [main] DEBUG org.apache.ibatis.io.DefaultVFS -Not a JAR: file:/Users/sunzhengchang/mybatis/mybatis-006-antic/target/classes/com/powernode/mybatis/pojo/Car.class
+2024-07-22 21:16:17.953 [main] DEBUG org.apache.ibatis.io.DefaultVFS -Reader entry: ����   A L
+2024-07-22 21:16:17.953 [main] DEBUG org.apache.ibatis.io.ResolverUtil -Checking to see if class com.powernode.mybatis.pojo.Car matches criteria [is assignable to Object]
+2024-07-22 21:16:17.973 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 21:16:17.974 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 21:16:17.974 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 21:16:17.974 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 21:16:28.399 [main] DEBUG org.apache.ibatis.logging.LogFactory -Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2024-07-22 21:16:28.401 [main] DEBUG org.apache.ibatis.io.VFS -Class not found: org.jboss.vfs.VFS
+2024-07-22 21:16:28.401 [main] DEBUG org.apache.ibatis.io.JBoss6VFS -JBoss 6 VFS API is not available in this environment.
+2024-07-22 21:16:28.402 [main] DEBUG org.apache.ibatis.io.VFS -Class not found: org.jboss.vfs.VirtualFile
+2024-07-22 21:16:28.402 [main] DEBUG org.apache.ibatis.io.VFS -VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+2024-07-22 21:16:28.402 [main] DEBUG org.apache.ibatis.io.VFS -Using VFS adapter org.apache.ibatis.io.DefaultVFS
+2024-07-22 21:16:28.402 [main] DEBUG org.apache.ibatis.io.DefaultVFS -Find JAR URL: file:/Users/sunzhengchang/mybatis/mybatis-006-antic/target/classes/com/powernode/mybatis/pojo
+2024-07-22 21:16:28.402 [main] DEBUG org.apache.ibatis.io.DefaultVFS -Not a JAR: file:/Users/sunzhengchang/mybatis/mybatis-006-antic/target/classes/com/powernode/mybatis/pojo
+2024-07-22 21:16:28.430 [main] DEBUG org.apache.ibatis.io.DefaultVFS -Reader entry: Car.class
+2024-07-22 21:16:28.430 [main] DEBUG org.apache.ibatis.io.DefaultVFS -Listing file:/Users/sunzhengchang/mybatis/mybatis-006-antic/target/classes/com/powernode/mybatis/pojo
+2024-07-22 21:16:28.430 [main] DEBUG org.apache.ibatis.io.DefaultVFS -Find JAR URL: file:/Users/sunzhengchang/mybatis/mybatis-006-antic/target/classes/com/powernode/mybatis/pojo/Car.class
+2024-07-22 21:16:28.430 [main] DEBUG org.apache.ibatis.io.DefaultVFS -Not a JAR: file:/Users/sunzhengchang/mybatis/mybatis-006-antic/target/classes/com/powernode/mybatis/pojo/Car.class
+2024-07-22 21:16:28.430 [main] DEBUG org.apache.ibatis.io.DefaultVFS -Reader entry: ����   A L
+2024-07-22 21:16:28.431 [main] DEBUG org.apache.ibatis.io.ResolverUtil -Checking to see if class com.powernode.mybatis.pojo.Car matches criteria [is assignable to Object]
+2024-07-22 21:16:28.457 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 21:16:28.458 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 21:16:28.458 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 21:16:28.458 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 21:17:14.438 [main] DEBUG org.apache.ibatis.logging.LogFactory -Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2024-07-22 21:17:14.441 [main] DEBUG org.apache.ibatis.io.VFS -Class not found: org.jboss.vfs.VFS
+2024-07-22 21:17:14.441 [main] DEBUG org.apache.ibatis.io.JBoss6VFS -JBoss 6 VFS API is not available in this environment.
+2024-07-22 21:17:14.441 [main] DEBUG org.apache.ibatis.io.VFS -Class not found: org.jboss.vfs.VirtualFile
+2024-07-22 21:17:14.441 [main] DEBUG org.apache.ibatis.io.VFS -VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+2024-07-22 21:17:14.441 [main] DEBUG org.apache.ibatis.io.VFS -Using VFS adapter org.apache.ibatis.io.DefaultVFS
+2024-07-22 21:17:14.442 [main] DEBUG org.apache.ibatis.io.DefaultVFS -Find JAR URL: file:/Users/sunzhengchang/mybatis/mybatis-006-antic/target/classes/com/powernode/mybatis/pojo
+2024-07-22 21:17:14.442 [main] DEBUG org.apache.ibatis.io.DefaultVFS -Not a JAR: file:/Users/sunzhengchang/mybatis/mybatis-006-antic/target/classes/com/powernode/mybatis/pojo
+2024-07-22 21:17:14.467 [main] DEBUG org.apache.ibatis.io.DefaultVFS -Reader entry: Car.class
+2024-07-22 21:17:14.468 [main] DEBUG org.apache.ibatis.io.DefaultVFS -Listing file:/Users/sunzhengchang/mybatis/mybatis-006-antic/target/classes/com/powernode/mybatis/pojo
+2024-07-22 21:17:14.468 [main] DEBUG org.apache.ibatis.io.DefaultVFS -Find JAR URL: file:/Users/sunzhengchang/mybatis/mybatis-006-antic/target/classes/com/powernode/mybatis/pojo/Car.class
+2024-07-22 21:17:14.468 [main] DEBUG org.apache.ibatis.io.DefaultVFS -Not a JAR: file:/Users/sunzhengchang/mybatis/mybatis-006-antic/target/classes/com/powernode/mybatis/pojo/Car.class
+2024-07-22 21:17:14.468 [main] DEBUG org.apache.ibatis.io.DefaultVFS -Reader entry: ����   A L
+2024-07-22 21:17:14.469 [main] DEBUG org.apache.ibatis.io.ResolverUtil -Checking to see if class com.powernode.mybatis.pojo.Car matches criteria [is assignable to Object]
+2024-07-22 21:17:14.489 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 21:17:14.489 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 21:17:14.489 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 21:17:14.490 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 21:17:22.409 [main] DEBUG org.apache.ibatis.logging.LogFactory -Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2024-07-22 21:17:22.411 [main] DEBUG org.apache.ibatis.io.VFS -Class not found: org.jboss.vfs.VFS
+2024-07-22 21:17:22.411 [main] DEBUG org.apache.ibatis.io.JBoss6VFS -JBoss 6 VFS API is not available in this environment.
+2024-07-22 21:17:22.412 [main] DEBUG org.apache.ibatis.io.VFS -Class not found: org.jboss.vfs.VirtualFile
+2024-07-22 21:17:22.412 [main] DEBUG org.apache.ibatis.io.VFS -VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+2024-07-22 21:17:22.412 [main] DEBUG org.apache.ibatis.io.VFS -Using VFS adapter org.apache.ibatis.io.DefaultVFS
+2024-07-22 21:17:22.413 [main] DEBUG org.apache.ibatis.io.DefaultVFS -Find JAR URL: file:/Users/sunzhengchang/mybatis/mybatis-006-antic/target/classes/com/powernode/mybatis/pojo
+2024-07-22 21:17:22.413 [main] DEBUG org.apache.ibatis.io.DefaultVFS -Not a JAR: file:/Users/sunzhengchang/mybatis/mybatis-006-antic/target/classes/com/powernode/mybatis/pojo
+2024-07-22 21:17:22.438 [main] DEBUG org.apache.ibatis.io.DefaultVFS -Reader entry: Car.class
+2024-07-22 21:17:22.438 [main] DEBUG org.apache.ibatis.io.DefaultVFS -Listing file:/Users/sunzhengchang/mybatis/mybatis-006-antic/target/classes/com/powernode/mybatis/pojo
+2024-07-22 21:17:22.438 [main] DEBUG org.apache.ibatis.io.DefaultVFS -Find JAR URL: file:/Users/sunzhengchang/mybatis/mybatis-006-antic/target/classes/com/powernode/mybatis/pojo/Car.class
+2024-07-22 21:17:22.438 [main] DEBUG org.apache.ibatis.io.DefaultVFS -Not a JAR: file:/Users/sunzhengchang/mybatis/mybatis-006-antic/target/classes/com/powernode/mybatis/pojo/Car.class
+2024-07-22 21:17:22.439 [main] DEBUG org.apache.ibatis.io.DefaultVFS -Reader entry: ����   A L
+2024-07-22 21:17:22.439 [main] DEBUG org.apache.ibatis.io.ResolverUtil -Checking to see if class com.powernode.mybatis.pojo.Car matches criteria [is assignable to Object]
+2024-07-22 21:17:22.457 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 21:17:22.457 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 21:17:22.457 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 21:17:22.457 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 21:18:44.705 [main] DEBUG org.apache.ibatis.logging.LogFactory -Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2024-07-22 21:18:44.707 [main] DEBUG org.apache.ibatis.io.VFS -Class not found: org.jboss.vfs.VFS
+2024-07-22 21:18:44.707 [main] DEBUG org.apache.ibatis.io.JBoss6VFS -JBoss 6 VFS API is not available in this environment.
+2024-07-22 21:18:44.707 [main] DEBUG org.apache.ibatis.io.VFS -Class not found: org.jboss.vfs.VirtualFile
+2024-07-22 21:18:44.707 [main] DEBUG org.apache.ibatis.io.VFS -VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+2024-07-22 21:18:44.708 [main] DEBUG org.apache.ibatis.io.VFS -Using VFS adapter org.apache.ibatis.io.DefaultVFS
+2024-07-22 21:18:44.708 [main] DEBUG org.apache.ibatis.io.DefaultVFS -Find JAR URL: file:/Users/sunzhengchang/mybatis/mybatis-006-antic/target/classes/com/powernode/mybatis/pojo
+2024-07-22 21:18:44.708 [main] DEBUG org.apache.ibatis.io.DefaultVFS -Not a JAR: file:/Users/sunzhengchang/mybatis/mybatis-006-antic/target/classes/com/powernode/mybatis/pojo
+2024-07-22 21:18:44.733 [main] DEBUG org.apache.ibatis.io.DefaultVFS -Reader entry: Car.class
+2024-07-22 21:18:44.733 [main] DEBUG org.apache.ibatis.io.DefaultVFS -Listing file:/Users/sunzhengchang/mybatis/mybatis-006-antic/target/classes/com/powernode/mybatis/pojo
+2024-07-22 21:18:44.733 [main] DEBUG org.apache.ibatis.io.DefaultVFS -Find JAR URL: file:/Users/sunzhengchang/mybatis/mybatis-006-antic/target/classes/com/powernode/mybatis/pojo/Car.class
+2024-07-22 21:18:44.733 [main] DEBUG org.apache.ibatis.io.DefaultVFS -Not a JAR: file:/Users/sunzhengchang/mybatis/mybatis-006-antic/target/classes/com/powernode/mybatis/pojo/Car.class
+2024-07-22 21:18:44.734 [main] DEBUG org.apache.ibatis.io.DefaultVFS -Reader entry: ����   A L
+2024-07-22 21:18:44.734 [main] DEBUG org.apache.ibatis.io.ResolverUtil -Checking to see if class com.powernode.mybatis.pojo.Car matches criteria [is assignable to Object]
+2024-07-22 21:18:44.751 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 21:18:44.751 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 21:18:44.751 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 21:18:44.751 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 21:18:48.662 [main] DEBUG org.apache.ibatis.logging.LogFactory -Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2024-07-22 21:18:48.664 [main] DEBUG org.apache.ibatis.io.VFS -Class not found: org.jboss.vfs.VFS
+2024-07-22 21:18:48.664 [main] DEBUG org.apache.ibatis.io.JBoss6VFS -JBoss 6 VFS API is not available in this environment.
+2024-07-22 21:18:48.664 [main] DEBUG org.apache.ibatis.io.VFS -Class not found: org.jboss.vfs.VirtualFile
+2024-07-22 21:18:48.664 [main] DEBUG org.apache.ibatis.io.VFS -VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+2024-07-22 21:18:48.665 [main] DEBUG org.apache.ibatis.io.VFS -Using VFS adapter org.apache.ibatis.io.DefaultVFS
+2024-07-22 21:18:48.665 [main] DEBUG org.apache.ibatis.io.DefaultVFS -Find JAR URL: file:/Users/sunzhengchang/mybatis/mybatis-006-antic/target/classes/com/powernode/mybatis/pojo
+2024-07-22 21:18:48.665 [main] DEBUG org.apache.ibatis.io.DefaultVFS -Not a JAR: file:/Users/sunzhengchang/mybatis/mybatis-006-antic/target/classes/com/powernode/mybatis/pojo
+2024-07-22 21:18:48.689 [main] DEBUG org.apache.ibatis.io.DefaultVFS -Reader entry: Car.class
+2024-07-22 21:18:48.690 [main] DEBUG org.apache.ibatis.io.DefaultVFS -Listing file:/Users/sunzhengchang/mybatis/mybatis-006-antic/target/classes/com/powernode/mybatis/pojo
+2024-07-22 21:18:48.690 [main] DEBUG org.apache.ibatis.io.DefaultVFS -Find JAR URL: file:/Users/sunzhengchang/mybatis/mybatis-006-antic/target/classes/com/powernode/mybatis/pojo/Car.class
+2024-07-22 21:18:48.690 [main] DEBUG org.apache.ibatis.io.DefaultVFS -Not a JAR: file:/Users/sunzhengchang/mybatis/mybatis-006-antic/target/classes/com/powernode/mybatis/pojo/Car.class
+2024-07-22 21:18:48.690 [main] DEBUG org.apache.ibatis.io.DefaultVFS -Reader entry: ����   A L
+2024-07-22 21:18:48.691 [main] DEBUG org.apache.ibatis.io.ResolverUtil -Checking to see if class com.powernode.mybatis.pojo.Car matches criteria [is assignable to Object]
+2024-07-22 21:18:48.708 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 21:18:48.708 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 21:18:48.708 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 21:18:48.709 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 21:19:39.925 [main] DEBUG org.apache.ibatis.logging.LogFactory -Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2024-07-22 21:19:39.927 [main] DEBUG org.apache.ibatis.io.VFS -Class not found: org.jboss.vfs.VFS
+2024-07-22 21:19:39.927 [main] DEBUG org.apache.ibatis.io.JBoss6VFS -JBoss 6 VFS API is not available in this environment.
+2024-07-22 21:19:39.927 [main] DEBUG org.apache.ibatis.io.VFS -Class not found: org.jboss.vfs.VirtualFile
+2024-07-22 21:19:39.927 [main] DEBUG org.apache.ibatis.io.VFS -VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+2024-07-22 21:19:39.928 [main] DEBUG org.apache.ibatis.io.VFS -Using VFS adapter org.apache.ibatis.io.DefaultVFS
+2024-07-22 21:19:39.928 [main] DEBUG org.apache.ibatis.io.DefaultVFS -Find JAR URL: file:/Users/sunzhengchang/mybatis/mybatis-006-antic/target/classes/com/powernode/mybatis/pojo
+2024-07-22 21:19:39.928 [main] DEBUG org.apache.ibatis.io.DefaultVFS -Not a JAR: file:/Users/sunzhengchang/mybatis/mybatis-006-antic/target/classes/com/powernode/mybatis/pojo
+2024-07-22 21:19:39.953 [main] DEBUG org.apache.ibatis.io.DefaultVFS -Reader entry: Car.class
+2024-07-22 21:19:39.953 [main] DEBUG org.apache.ibatis.io.DefaultVFS -Listing file:/Users/sunzhengchang/mybatis/mybatis-006-antic/target/classes/com/powernode/mybatis/pojo
+2024-07-22 21:19:39.954 [main] DEBUG org.apache.ibatis.io.DefaultVFS -Find JAR URL: file:/Users/sunzhengchang/mybatis/mybatis-006-antic/target/classes/com/powernode/mybatis/pojo/Car.class
+2024-07-22 21:19:39.954 [main] DEBUG org.apache.ibatis.io.DefaultVFS -Not a JAR: file:/Users/sunzhengchang/mybatis/mybatis-006-antic/target/classes/com/powernode/mybatis/pojo/Car.class
+2024-07-22 21:19:39.954 [main] DEBUG org.apache.ibatis.io.DefaultVFS -Reader entry: ����   A L
+2024-07-22 21:19:39.954 [main] DEBUG org.apache.ibatis.io.ResolverUtil -Checking to see if class com.powernode.mybatis.pojo.Car matches criteria [is assignable to Object]
+2024-07-22 21:19:39.973 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 21:19:39.973 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 21:19:39.973 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 21:19:39.973 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 21:19:40.008 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction -Opening JDBC Connection
+2024-07-22 21:19:40.154 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -Created connection 846918683.
+2024-07-22 21:19:40.155 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction -Setting autocommit to false on JDBC Connection [org.postgresql.jdbc.PgConnection@327af41b]
+2024-07-22 21:19:40.157 [main] DEBUG c.p.m.mapper.CarMapper.insertCarUseGeneratedKeys -==>  Preparing: INSERT INTO car(id, car_num, brand, guide_price, produce_time, car_type) VALUES(null, ?, ?, ?, ?, ?)
+2024-07-22 21:19:40.175 [main] DEBUG c.p.m.mapper.CarMapper.insertCarUseGeneratedKeys -==> Parameters: 9991(String), 凱美瑞(String), 30.0(Double), 2020-11-11(String), 燃油車(String)
+2024-07-22 21:19:57.819 [main] DEBUG org.apache.ibatis.logging.LogFactory -Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2024-07-22 21:19:57.821 [main] DEBUG org.apache.ibatis.io.VFS -Class not found: org.jboss.vfs.VFS
+2024-07-22 21:19:57.821 [main] DEBUG org.apache.ibatis.io.JBoss6VFS -JBoss 6 VFS API is not available in this environment.
+2024-07-22 21:19:57.821 [main] DEBUG org.apache.ibatis.io.VFS -Class not found: org.jboss.vfs.VirtualFile
+2024-07-22 21:19:57.821 [main] DEBUG org.apache.ibatis.io.VFS -VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+2024-07-22 21:19:57.821 [main] DEBUG org.apache.ibatis.io.VFS -Using VFS adapter org.apache.ibatis.io.DefaultVFS
+2024-07-22 21:19:57.821 [main] DEBUG org.apache.ibatis.io.DefaultVFS -Find JAR URL: file:/Users/sunzhengchang/mybatis/mybatis-006-antic/target/classes/com/powernode/mybatis/pojo
+2024-07-22 21:19:57.821 [main] DEBUG org.apache.ibatis.io.DefaultVFS -Not a JAR: file:/Users/sunzhengchang/mybatis/mybatis-006-antic/target/classes/com/powernode/mybatis/pojo
+2024-07-22 21:19:57.846 [main] DEBUG org.apache.ibatis.io.DefaultVFS -Reader entry: Car.class
+2024-07-22 21:19:57.847 [main] DEBUG org.apache.ibatis.io.DefaultVFS -Listing file:/Users/sunzhengchang/mybatis/mybatis-006-antic/target/classes/com/powernode/mybatis/pojo
+2024-07-22 21:19:57.847 [main] DEBUG org.apache.ibatis.io.DefaultVFS -Find JAR URL: file:/Users/sunzhengchang/mybatis/mybatis-006-antic/target/classes/com/powernode/mybatis/pojo/Car.class
+2024-07-22 21:19:57.847 [main] DEBUG org.apache.ibatis.io.DefaultVFS -Not a JAR: file:/Users/sunzhengchang/mybatis/mybatis-006-antic/target/classes/com/powernode/mybatis/pojo/Car.class
+2024-07-22 21:19:57.847 [main] DEBUG org.apache.ibatis.io.DefaultVFS -Reader entry: ����   A L
+2024-07-22 21:19:57.848 [main] DEBUG org.apache.ibatis.io.ResolverUtil -Checking to see if class com.powernode.mybatis.pojo.Car matches criteria [is assignable to Object]
+2024-07-22 21:19:57.866 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 21:19:57.866 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 21:19:57.866 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 21:19:57.866 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 21:19:57.902 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction -Opening JDBC Connection
+2024-07-22 21:19:58.032 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -Created connection 846918683.
+2024-07-22 21:19:58.033 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction -Setting autocommit to false on JDBC Connection [org.postgresql.jdbc.PgConnection@327af41b]
+2024-07-22 21:19:58.035 [main] DEBUG c.p.m.mapper.CarMapper.insertCarUseGeneratedKeys -==>  Preparing: INSERT INTO car(car_num, brand, guide_price, produce_time, car_type) VALUES(?, ?, ?, ?, ?)
+2024-07-22 21:19:58.053 [main] DEBUG c.p.m.mapper.CarMapper.insertCarUseGeneratedKeys -==> Parameters: 9991(String), 凱美瑞(String), 30.0(Double), 2020-11-11(String), 燃油車(String)
+2024-07-22 21:19:58.062 [main] DEBUG c.p.m.mapper.CarMapper.insertCarUseGeneratedKeys -<==    Updates: 1
+2024-07-22 21:19:58.067 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction -Committing JDBC Connection [org.postgresql.jdbc.PgConnection@327af41b]
+2024-07-22 21:19:58.071 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction -Resetting autocommit to true on JDBC Connection [org.postgresql.jdbc.PgConnection@327af41b]
+2024-07-22 21:19:58.071 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction -Closing JDBC Connection [org.postgresql.jdbc.PgConnection@327af41b]
+2024-07-22 21:19:58.071 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -Returned connection 846918683 to pool.
+2024-07-22 21:20:05.486 [main] DEBUG org.apache.ibatis.logging.LogFactory -Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2024-07-22 21:20:05.488 [main] DEBUG org.apache.ibatis.io.VFS -Class not found: org.jboss.vfs.VFS
+2024-07-22 21:20:05.488 [main] DEBUG org.apache.ibatis.io.JBoss6VFS -JBoss 6 VFS API is not available in this environment.
+2024-07-22 21:20:05.488 [main] DEBUG org.apache.ibatis.io.VFS -Class not found: org.jboss.vfs.VirtualFile
+2024-07-22 21:20:05.488 [main] DEBUG org.apache.ibatis.io.VFS -VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+2024-07-22 21:20:05.489 [main] DEBUG org.apache.ibatis.io.VFS -Using VFS adapter org.apache.ibatis.io.DefaultVFS
+2024-07-22 21:20:05.489 [main] DEBUG org.apache.ibatis.io.DefaultVFS -Find JAR URL: file:/Users/sunzhengchang/mybatis/mybatis-006-antic/target/classes/com/powernode/mybatis/pojo
+2024-07-22 21:20:05.489 [main] DEBUG org.apache.ibatis.io.DefaultVFS -Not a JAR: file:/Users/sunzhengchang/mybatis/mybatis-006-antic/target/classes/com/powernode/mybatis/pojo
+2024-07-22 21:20:05.513 [main] DEBUG org.apache.ibatis.io.DefaultVFS -Reader entry: Car.class
+2024-07-22 21:20:05.514 [main] DEBUG org.apache.ibatis.io.DefaultVFS -Listing file:/Users/sunzhengchang/mybatis/mybatis-006-antic/target/classes/com/powernode/mybatis/pojo
+2024-07-22 21:20:05.514 [main] DEBUG org.apache.ibatis.io.DefaultVFS -Find JAR URL: file:/Users/sunzhengchang/mybatis/mybatis-006-antic/target/classes/com/powernode/mybatis/pojo/Car.class
+2024-07-22 21:20:05.514 [main] DEBUG org.apache.ibatis.io.DefaultVFS -Not a JAR: file:/Users/sunzhengchang/mybatis/mybatis-006-antic/target/classes/com/powernode/mybatis/pojo/Car.class
+2024-07-22 21:20:05.514 [main] DEBUG org.apache.ibatis.io.DefaultVFS -Reader entry: ����   A L
+2024-07-22 21:20:05.515 [main] DEBUG org.apache.ibatis.io.ResolverUtil -Checking to see if class com.powernode.mybatis.pojo.Car matches criteria [is assignable to Object]
+2024-07-22 21:20:05.533 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 21:20:05.533 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 21:20:05.533 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 21:20:05.533 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -PooledDataSource forcefully closed/removed all connections.
+2024-07-22 21:20:05.566 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction -Opening JDBC Connection
+2024-07-22 21:20:05.687 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -Created connection 846918683.
+2024-07-22 21:20:05.689 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction -Setting autocommit to false on JDBC Connection [org.postgresql.jdbc.PgConnection@327af41b]
+2024-07-22 21:20:05.690 [main] DEBUG c.p.m.mapper.CarMapper.insertCarUseGeneratedKeys -==>  Preparing: INSERT INTO car(car_num, brand, guide_price, produce_time, car_type) VALUES(?, ?, ?, ?, ?)
+2024-07-22 21:20:05.711 [main] DEBUG c.p.m.mapper.CarMapper.insertCarUseGeneratedKeys -==> Parameters: 9991(String), 凱美瑞(String), 30.0(Double), 2020-11-11(String), 燃油車(String)
+2024-07-22 21:20:05.717 [main] DEBUG c.p.m.mapper.CarMapper.insertCarUseGeneratedKeys -<==    Updates: 1
+2024-07-22 21:20:05.721 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction -Committing JDBC Connection [org.postgresql.jdbc.PgConnection@327af41b]
+2024-07-22 21:20:05.725 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction -Resetting autocommit to true on JDBC Connection [org.postgresql.jdbc.PgConnection@327af41b]
+2024-07-22 21:20:05.725 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction -Closing JDBC Connection [org.postgresql.jdbc.PgConnection@327af41b]
+2024-07-22 21:20:05.725 [main] DEBUG o.apache.ibatis.datasource.pooled.PooledDataSource -Returned connection 846918683 to pool.

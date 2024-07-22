@@ -51,6 +51,6 @@
         <!-- 只要配置一個就可以了，會將全部的 mapper.xml 都配置好  -->
         <!-- 這種方式在實際開發中是使用的 -->
         <!-- 前提是: XML 文件必須和介面放在一起，並且名子一致 -->
-        <mapper class="com.powernode.mybatis.mapper"/>
+        <!-- <mapper class="com.powernode.mybatis.mapper"/> -->
     </mappers>
 </configuration>

@@ -11,6 +11,17 @@ import java.util.List;
 public class CarMapperTest {
 
     @Test
+    public void testInsertCarUseGeneratedKeys() {
+        SqlSession sqlSession = SqlSessionUtil.openSession();
+        CarMapper mapper = sqlSession.getMapper(CarMapper.class);
+        Car car = new Car(null, "9991", "凱美瑞", 30.0, "2020-11-11", "燃油車");
+        int count = mapper.insertCarUseGeneratedKeys(car);
+        System.out.println(car);
+        sqlSession.commit();
+        sqlSession.close();
+    }
+
+    @Test
     public void testDeleteBatch() {
         SqlSession sqlSession = SqlSessionUtil.openSession();
         CarMapper mapper = sqlSession.getMapper(CarMapper.class);
