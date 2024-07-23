@@ -11,6 +11,24 @@ import java.util.Map;
 public class CarMapperTest {
 
     @Test
+    public void testSelectTotal() {
+        SqlSession sqlSession = SqlSessionUtil.openSession();
+        CarMapper mapper = sqlSession.getMapper(CarMapper.class);
+        Integer count = mapper.selectTotal();
+        System.out.println("總紀錄條數：" + count);
+        sqlSession.close();
+    }
+
+    @Test
+    public void testSelectAllByMapUnderscoreToCamelCase() {
+        SqlSession sqlSession = SqlSessionUtil.openSession();
+        CarMapper mapper = sqlSession.getMapper(CarMapper.class);
+        List<Car> cars = mapper.selectAllByMapUnderscoreToCamelCase();
+        cars.forEach(car -> System.out.println(car));
+        sqlSession.close();
+    }
+
+    @Test
     public void testSelectAllResultMap() {
         SqlSession sqlSession = SqlSessionUtil.openSession();
         CarMapper mapper = sqlSession.getMapper(CarMapper.class);

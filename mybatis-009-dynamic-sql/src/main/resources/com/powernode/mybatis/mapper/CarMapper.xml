@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.powernode.mybatis.mapper.CarMapper">
+
+    <select id="selectByMultiCondition" resultType="car">
+        SELECT
+            *
+        FROM
+            car
+        WHERE 1 = 1
+        <!--
+            1. if 標籤中的 test 屬性是必須的。
+            2. if 標籤中的 test 屬性的值是 false 或者 true。
+            3. 如果 test 是 true，則 if 標籤中的 sql 語句就會拼接。反之，則不會拼接。
+            4. test 屬性的中可以使用的是：
+               -> 當使用 @Param 註解，那麼 test 中要出現的是 @Param 註解指定的參數名。@Param("brand")，那麼這邊只能使用 brand
+               -> 當沒有使用 @Param 註解，那麼 test 中要出現的是：param1 or param2 or param3 or arg0 or arg1 or arg2 ...
+               -> 當使用了 POJO，那麼 test 中出現的是 POJO 類的屬性名。
+           5. 在 mybatis 的動態 SQL 當中，不能使用 &&，只能使用 and。
+         -->
+        <if test="brand != null and brand != ''">
+            AND brand LIKE CONCAT('%', #{brand}, '%')
+        </if>
+        <if test="guidePrice != null and guidePrice != ''">
+            AND guide_price &gt; #{guidePrice}
+        </if>
+        <if test="carType != null and carType != ''">
+            AND car_type = #{carType}
+        </if>
+    </select>
+
+</mapper>

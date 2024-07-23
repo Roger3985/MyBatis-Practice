@@ -4,6 +4,20 @@
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.powernode.mybatis.mapper.CarMapper">
 
+    <select id="selectTotal" resultType="java.lang.Integer">
+        SELECT
+            count(*)
+        FROM
+            car
+    </select>
+
+    <select id="selectAllByMapUnderscoreToCamelCase" resultType="car">
+        SELECT
+            *
+        FROM
+            car
+    </select>
+
     <!--
         1. 專門定義一個結果映射，在這個結果映射當中指定資料庫中表的字段名和 Java 類的屬性的對應關係。
         2. type 屬性：用來指定 POJO 的類名。

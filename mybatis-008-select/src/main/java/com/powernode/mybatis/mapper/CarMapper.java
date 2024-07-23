@@ -9,6 +9,18 @@ import java.util.Map;
 public interface CarMapper {
 
     /**
+     * 獲取 Car 的總紀錄條數。
+     * @return Integer
+     */
+    Integer selectTotal();
+
+    /**
+     * 查詢所有的 Car 信息，但是啟用了駝峰命名自動映射機制
+     * @return List
+     */
+    List<Car> selectAllByMapUnderscoreToCamelCase();
+
+    /**
      * 查詢所有的 Car 信息，使用 resultMap 標籤進行結果映射。
      * @return List
      */
