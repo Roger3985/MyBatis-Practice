@@ -69,14 +69,20 @@
         WHERE id = #{id}
     </select>
 
+    <!-- 聲明一個 SQL 片段 -->
+    <sql id="carColumnNameSql">
+        id,
+        car_num as carNum,
+        brand,
+        guide_price as guidePrice,
+        produce_time as produceTime,
+        car_type as carType
+    </sql>
+
     <select id="selectById2" resultType="car" parameterType="car">
         SELECT
-            id,
-            car_num as carNum,
-            brand,
-            guide_price as guidePrice,
-            produce_time as produceTime,
-            car_type as carType
+            <!-- 將聲明的 SQL 片段包含進來。 -->
+            <include refid="carColumnNameSql"/>
         FROM
             car
         WHERE id = #{id}

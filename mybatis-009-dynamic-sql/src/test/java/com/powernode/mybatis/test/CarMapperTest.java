@@ -12,6 +12,17 @@ import java.util.List;
 public class CarMapperTest {
 
     @Test
+    public void testDeleteById2() {
+        SqlSession sqlSession = SqlSessionUtil.openSession();
+        CarMapper mapper = sqlSession.getMapper(CarMapper.class);
+        Integer[] ids = {58, 59, 60};
+        int count = mapper.deleteByIds2(ids);
+        System.out.println(count);
+        sqlSession.commit();
+        sqlSession.close();
+    }
+
+    @Test
     public void testInsertBatch() {
         SqlSession sqlSession = SqlSessionUtil.openSession();
         CarMapper mapper = sqlSession.getMapper(CarMapper.class);

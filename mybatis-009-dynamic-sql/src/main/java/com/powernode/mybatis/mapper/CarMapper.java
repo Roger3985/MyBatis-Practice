@@ -10,6 +10,13 @@ import java.util.List;
 public interface CarMapper {
 
     /**
+     * 根據 id 批量刪除
+     * @param ids ids
+     * @return int
+     */
+    int deleteByIds2(@Param("ids") Integer[] ids);
+
+    /**
      * 批量插入，一次插入多條信息
      * @param cars 多條 car 信息
      * @return int
