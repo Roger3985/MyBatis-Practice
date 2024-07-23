@@ -1,6 +1,7 @@
 package com.powernode.mybatis.mapper;
 
 import com.powernode.mybatis.pojo.Car;
+import org.apache.ibatis.annotations.MapKey;
 
 import java.util.List;
 import java.util.Map;
@@ -8,8 +9,31 @@ import java.util.Map;
 public interface CarMapper {
 
     /**
+     * 查詢所有的 Car 信息，使用 resultMap 標籤進行結果映射。
+     * @return List
+     */
+    List<Car> selectAllByResultMap();
+
+    /**
+     * 查詢所有的 Car，返回一個大 Map 集合。
+     * Map 集合的 key 是每條紀錄的主鍵值。
+     * Map 集合的 value 是每條紀錄。
+     * {
+     *      2={car_num=1001, id=2, guide_price=30.00, produce_time=2000-10-11, brand=豐田霸道, car_type=燃油車},
+     *      3={car_num=1001, id=3, guide_price=30.00, produce_time=2000-10-11, brand=豐田霸道, car_type=燃油車},
+     *      4={car_num=9999, id=4, guide_price=30.30, produce_time=1999-11-10, brand=凱美瑞, car_type=燃油車},
+     *      5={car_num=1001, id=5, guide_price=30.00, produce_time=2000-10-11, brand=豐田霸道, car_type=燃油車},
+     *      6={car_num=1001, id=6, guide_price=30.00, produce_time=2000-10-11, brand=豐田霸道, car_type=燃油車},
+     *      7={car_num=1001, id=7, guide_price=30.00, produce_time=2000-10-11, brand=豐田霸道, car_type=燃油車}
+     * }
+     * @return Map
+     */
+    @MapKey("id") // 將查詢結果的 id 值作為整個大 Map 集合的 key。
+    Map<Integer, Map<String, Object>> selectAllRetMap();
+
+    /**
      * 查詢所有的 Car 信息，返回一個存放 Map 集合的 List 集合。
-     * @return
+     * @return List
      */
     List<Map<String, Object>> selectAllRetListMap();
 

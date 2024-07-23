@@ -4,6 +4,40 @@
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.powernode.mybatis.mapper.CarMapper">
 
+    <!--
+        1. 專門定義一個結果映射，在這個結果映射當中指定資料庫中表的字段名和 Java 類的屬性的對應關係。
+        2. type 屬性：用來指定 POJO 的類名。
+        3. id 屬性：指定 resultMap 的唯一標示，這個 id 將來要在 select 標籤中使用。
+    -->
+    <resultMap id="carResultMap" type="Car">
+        <!-- 如果資料庫表中有主鍵，一般都是有主鍵，要不然不符合資料庫設計的第一原則 -->
+        <!-- 如果有主鍵，建議這裡配置一個 id 標籤。注意：這不是必須的。但是官方的解釋是什麼呢？這樣的配置可以讓 mybatis 提高效率。 -->
+        <id property="id" column="id"/>
+        <!-- property 後面填寫 POJO 的屬性名 -->
+        <!-- column 後面填寫資料庫的字段名 -->
+        <result property="carNum" column="car_num" javaType="java.lang.String" jdbcType="VARCHAR"/>
+        <!-- 如果 property 和 column 是一樣的。 這個可以省略 -->
+        <!-- <result property="brand" column="brand"/> -->
+        <result property="guidePrice" column="guide_price"/>
+        <result property="produceTime" column="produce_time"/>
+        <result property="carType" column="car_type" javaType="string" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <!-- select 標籤的 resultMap 屬性，用來指定使用哪個結果映射。resultMap 後面的值是 resultMap 的 id -->
+    <select id="selectAllByResultMap" resultMap="carResultMap">
+        SELECT
+            *
+        FROM
+            car
+    </select>
+
+    <select id="selectAllRetMap" resultType="map">
+        SELECT
+            *
+        FROM
+            car
+    </select>
+
     <!-- 這個 resultType 不是 List 是 Map  -->
     <select id="selectAllRetListMap" resultType="map">
         SELECT

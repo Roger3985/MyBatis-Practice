@@ -11,6 +11,24 @@ import java.util.Map;
 public class CarMapperTest {
 
     @Test
+    public void testSelectAllResultMap() {
+        SqlSession sqlSession = SqlSessionUtil.openSession();
+        CarMapper mapper = sqlSession.getMapper(CarMapper.class);
+        List<Car> cars = mapper.selectAllByResultMap();
+        cars.forEach(car -> System.out.println(car));
+        sqlSession.close();
+    }
+
+    @Test
+    public void testSelectAllMap() {
+        SqlSession sqlSession = SqlSessionUtil.openSession();
+        CarMapper mapper = sqlSession.getMapper(CarMapper.class);
+        Map<Integer, Map<String, Object>> map = mapper.selectAllRetMap();
+        System.out.println(map);
+        sqlSession.close();
+    }
+
+    @Test
     public void testSelectAllRetMap() {
         SqlSession sqlSession = SqlSessionUtil.openSession();
         CarMapper mapper = sqlSession.getMapper(CarMapper.class);
