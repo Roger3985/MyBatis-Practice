@@ -11,6 +11,22 @@ import java.util.List;
 public class CarMapperTest {
 
     @Test
+    public void testSelectByChoose() {
+        SqlSession sqlSession = SqlSessionUtil.openSession();
+        CarMapper mapper = sqlSession.getMapper(CarMapper.class);
+        // 三個條件都不為空
+        // List<Car> cars = mapper.selectByChoose("豐田霸道", 1.0, "新能源");
+        // 第一個條件為空
+        // List<Car> cars = mapper.selectByChoose("", 1.0, "新能源");
+        // 前兩的條件都為空
+        // List<Car> cars = mapper.selectByChoose("", null, "新能源");
+        // 全部為空
+        List<Car> cars = mapper.selectByChoose("", null, "");
+        cars.forEach(car -> System.out.println(car));
+        sqlSession.close();
+    }
+
+    @Test
     public void testUpdateBySet() {
         SqlSession sqlSession = SqlSessionUtil.openSession();
         CarMapper mapper = sqlSession.getMapper(CarMapper.class);
