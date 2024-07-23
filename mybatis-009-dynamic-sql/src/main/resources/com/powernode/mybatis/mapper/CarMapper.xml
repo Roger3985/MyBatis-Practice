@@ -3,6 +3,41 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.powernode.mybatis.mapper.CarMapper">
+
+    <!--
+        foreach 標籤的屬性：
+            (1) collection: 指定陣列或者集合
+            (2) item: 代表陣列或者集合中的元素
+            (3) separator: 循環之間的分隔符
+            (4) open: foreach 循環拼接的所有 sql 語句的最前面以什麼開始
+            (5) close: foreach 循環拼接的所有 sql 語句的最後面以什麼結束
+        collection="ids" 第一個寫這個的時候報錯了，錯誤信息是：[array, arg0]
+        什麼意思？
+            map.put("array", 陣列);
+            map.put("arg0", 陣列);
+    -->
+    <delete id="deleteByIds">
+        <!--
+        DELETE FROM
+            car 
+        WHERE 
+            id
+        IN(
+        <foreach collection="ids" item="id" separator=",">
+            #{id}
+        </foreach>
+        )
+        -->
+
+        DELETE FROM
+            car
+        WHERE
+            id
+        IN
+        <foreach collection="ids" item="id" separator="," open="(" close=")">
+            #{id}
+        </foreach>
+    </delete>
     
     <select id="selectByChoose" resultType="car">
         SELECT

@@ -10,6 +10,13 @@ import java.util.List;
 public interface CarMapper {
 
     /**
+     * 批量刪除：foreach 標籤
+     * @param ids 複數 id
+     * @return int
+     */
+    int deleteByIds(@Param("ids") Integer[] ids);
+
+    /**
      * 使用 choose when otherwise 標籤。
      * @param brand 品排
      * @param guidePrice 指導價
