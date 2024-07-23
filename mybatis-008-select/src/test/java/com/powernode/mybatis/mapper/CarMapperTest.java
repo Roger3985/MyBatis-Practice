@@ -6,8 +6,37 @@ import org.apache.ibatis.session.SqlSession;
 import org.junit.Test;
 
 import java.util.List;
+import java.util.Map;
 
 public class CarMapperTest {
+
+    @Test
+    public void testSelectAllRetMap() {
+        SqlSession sqlSession = SqlSessionUtil.openSession();
+        CarMapper mapper = sqlSession.getMapper(CarMapper.class);
+        List<Map<String, Object>> maps = mapper.selectAllRetListMap();
+        maps.forEach(map -> System.out.println(map));
+        sqlSession.close();
+    }
+
+    @Test
+    public void testSelectByIdRetMap() {
+        SqlSession sqlSession = SqlSessionUtil.openSession();
+        CarMapper mapper = sqlSession.getMapper(CarMapper.class);
+        Map<String, Object> cars = mapper.selectByIdRetMap(2);
+        System.out.println(cars);
+        sqlSession.close();
+    }
+
+
+    @Test
+    public void testSelectById2() {
+        SqlSession sqlSession = SqlSessionUtil.openSession();
+        CarMapper mapper = sqlSession.getMapper(CarMapper.class);
+        List<Car> cars = mapper.selectById2(2);
+        System.out.println(cars);
+        sqlSession.close();
+    }
 
     @Test
     public void testSelectByBrandLike() {

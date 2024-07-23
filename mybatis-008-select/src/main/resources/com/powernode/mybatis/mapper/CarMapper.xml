@@ -4,6 +4,36 @@
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.powernode.mybatis.mapper.CarMapper">
 
+    <!-- 這個 resultType 不是 List 是 Map  -->
+    <select id="selectAllRetListMap" resultType="map">
+        SELECT
+            *
+        FROM
+            car
+    </select>
+
+    <!-- resultType="java.util.Map" 有別名：map -->
+    <select id="selectByIdRetMap" resultType="map">
+        SELECT
+            *
+        FROM
+            car
+        WHERE id = #{id}
+    </select>
+
+    <select id="selectById2" resultType="car" parameterType="car">
+        SELECT
+            id,
+            car_num as carNum,
+            brand,
+            guide_price as guidePrice,
+            produce_time as produceTime,
+            car_type as carType
+        FROM
+            car
+        WHERE id = #{id}
+    </select>
+
     <select id="selectByBrandLike" resultType="car" parameterType="car">
         SELECT
             id,
