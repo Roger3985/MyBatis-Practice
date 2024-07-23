@@ -6,9 +6,26 @@ import com.powernode.mybatis.utils.SqlSessionUtil;
 import org.apache.ibatis.session.SqlSession;
 import org.junit.Test;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class CarMapperTest {
+
+    @Test
+    public void testInsertBatch() {
+        SqlSession sqlSession = SqlSessionUtil.openSession();
+        CarMapper mapper = sqlSession.getMapper(CarMapper.class);
+        Car car1 = new Car(null, "1200", "帕薩特1", 30.0, "2020-11-11", "燃油車");
+        Car car2 = new Car(null,"1200", "帕薩特2", 30.0, "2020-11-11", "燃油車");
+        Car car3 = new Car(null, "1200", "帕薩特3", 30.0, "2020-11-11", "燃油車");
+        List<Car> cars = new ArrayList<>();
+        cars.add(car1);
+        cars.add(car2);
+        cars.add(car3);
+        mapper.insertBatch(cars);
+        sqlSession.commit();
+        sqlSession.close();
+    }
 
     @Test
     public void testDeleteByIds() {

@@ -10,6 +10,13 @@ import java.util.List;
 public interface CarMapper {
 
     /**
+     * 批量插入，一次插入多條信息
+     * @param cars 多條 car 信息
+     * @return int
+     */
+    int insertBatch(@Param("cars") List<Car> cars);
+
+    /**
      * 批量刪除：foreach 標籤
      * @param ids 複數 id
      * @return int

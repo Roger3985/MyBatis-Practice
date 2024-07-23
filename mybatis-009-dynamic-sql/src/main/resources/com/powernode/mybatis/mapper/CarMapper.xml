@@ -4,6 +4,15 @@
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.powernode.mybatis.mapper.CarMapper">
 
+    <insert id="insertBatch">
+        INSERT INTO
+            car
+        VALUES
+        <foreach collection="cars" item="car" separator=",">
+            (#{car.id}, #{car.carNum}, #{car.brand}, #{car.guidePrice}, #{car.produceTime}, #{car.carType})
+        </foreach>
+    </insert>
+
     <!--
         foreach 標籤的屬性：
             (1) collection: 指定陣列或者集合
