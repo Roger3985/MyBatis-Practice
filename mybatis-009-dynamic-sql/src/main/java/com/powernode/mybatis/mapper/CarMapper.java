@@ -10,6 +10,38 @@ import java.util.List;
 public interface CarMapper {
 
     /**
+     * 更新 set 標籤
+     * @param car 汽車信息
+     * @return int
+     */
+    int updateBySet(Car car);
+
+    /**
+     * 更新 Car
+     * @param car 汽車的信息
+     * @return int
+     */
+    int updateById(Car car);
+
+    /**
+     * 使用 trim 標籤。
+     * @param brand 品排
+     * @param guidePrice 指導價
+     * @param carType 汽車類型
+     * @return List
+     */
+    List<Car> selectByMultiConditionWithTrim(@Param("brand") String brand, @Param("guidePrice") Double guidePrice, @Param("carType") String carType);
+
+    /**
+     * 使用 where 標籤，讓 where 子句更加智能
+     * @param brand 品排
+     * @param guidePrice 指導價
+     * @param carType 汽車類型
+     * @return List
+     */
+    List<Car> selectByMultiConditionWithWhere(@Param("brand") String brand, @Param("guidePrice") Double guidePrice, @Param("carType") String carType);
+
+    /**
      * 多條件查詢
      * @param brand 品排
      * @param guidePrice 指導價

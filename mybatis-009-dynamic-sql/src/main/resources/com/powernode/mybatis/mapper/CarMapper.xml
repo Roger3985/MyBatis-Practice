@@ -4,6 +4,79 @@
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.powernode.mybatis.mapper.CarMapper">
 
+    <update id="updateBySet">
+        UPDATE
+            car
+        <set>
+            <if test="carNum != null and carNum != ''">car_num = #{carNum},</if>
+            <if test="brand != null and brand != ''">brand = #{brand},</if>
+            <if test="guidePrice != null and guidePrice != ''">guide_price = #{guidePrice},</if>
+            <if test="produceTime != null and produceTime != ''">produce_time = #{produceTime},</if>
+            <if test="carType != null and carType != ''">car_type = #{carType}</if>
+        </set>
+        WHERE
+            id = #{id}
+    </update>
+
+
+    <update id="updateById">
+        UPDATE
+            car
+        SET
+            car_num = #{carNum},
+            brand = #{brand},
+            guide_price = #{guidePrice},
+            produce_time = #{produceTime},
+            car_type = #{carType}
+        WHERE
+            id = #{id}
+    </update>
+
+    <select id="selectByMultiConditionWithTrim" resultType="car">
+        SELECT
+            *
+        FROM
+            car
+        <!--
+            prefix: 加前綴
+            prefixOverrides: 去掉（刪除）前綴
+            suffix: 加後綴
+            suffixOverrides: 去掉（刪除）後綴
+        -->
+        <!-- prefix="where" 是在 trim 標籤的所有內容的前面添加 where -->
+        <!-- suffixOverrides="and|or" 把 trim 標籤中內容的後綴 and 或 or 去掉 -->
+        <trim prefix="where" suffixOverrides="and|or">
+            <if test="brand != null and brand != ''">
+                brand LIKE CONCAT('%', #{brand}, '%') AND
+            </if>
+            <if test="guidePrice != null and guidePrice != ''">
+                guide_price &gt; #{guidePrice} AND
+            </if>
+            <if test="carType != null and carType != ''">
+                car_type = #{carType}
+            </if>
+        </trim>
+    </select>
+
+    <select id="selectByMultiConditionWithWhere" resultType="car">
+        SELECT
+            *
+        FROM
+            car
+        <!-- where 標籤是專門負責 where 子句動態生成的 -->
+        <where>
+            <if test="brand != null and brand != ''">
+                AND brand LIKE CONCAT('%', #{brand}, '%')
+            </if>
+            <if test="guidePrice != null and guidePrice != ''">
+                AND guide_price &gt; #{guidePrice}
+            </if>
+            <if test="carType != null and carType != ''">
+                AND car_type = #{carType}
+            </if>
+        </where>
+    </select>
+
     <select id="selectByMultiCondition" resultType="car">
         SELECT
             *
