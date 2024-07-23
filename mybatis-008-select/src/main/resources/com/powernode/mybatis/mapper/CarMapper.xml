@@ -3,9 +3,43 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.powernode.mybatis.mapper.CarMapper">
+
+    <select id="selectByBrandLike" resultType="car" parameterType="car">
+        SELECT
+            id,
+            car_num as carNum,
+            brand,
+            guide_price as guidePrice,
+            produce_time as produceTime,
+            car_type as carType
+        FROM
+            car
+        WHERE
+            brand Like "%"#{brand}"%"
+    </select>
+
+    <select id="selectAll" resultType="car" parameterType="car">
+        SELECT
+            id,
+            car_num as carNum,
+            brand,
+            guide_price as guidePrice,
+            produce_time as produceTime,
+            car_type as carType
+        FROM
+            car
+    </select>
+
     <select id="selectById" resultType="car" parameterType="car">
-        SELECT *
-        FROM car
+        SELECT
+            id,
+            car_num as carNum,
+            brand,
+            guide_price as guidePrice,
+            produce_time as produceTime,
+            car_type as carType
+        FROM
+            car
         WHERE id = #{id}
     </select>
 </mapper>
