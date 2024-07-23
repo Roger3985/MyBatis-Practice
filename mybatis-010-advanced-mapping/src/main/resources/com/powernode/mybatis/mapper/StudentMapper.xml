@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.powernode.mybatis.mapper.StudentMapper">
+
+    <!-- 兩條 SQL 語句。完成多對一的分步查詢。 -->
+    <!-- 這裡是第一步：根據學生的 id 查詢學生的 id，查詢學生的所有信息。這些信息當中含有班級 id(cid) -->
+    <resultMap id="studentResultMapByStep" type="Student">
+        <id property="sid" column="sid"/>
+        <result property="sname" column="sname"/>
+        <association property="clazz"
+                     select="com.powernode.mybatis.mapper.ClazzMapper.selectByIdStep2"
+                     column="cid"/>
+    </resultMap>
+
+    <select id="selectByIdStep1" resultMap="studentResultMapByStep">
+        SELECT
+            sid, sname, cid
+        FROM
+            t_stu
+        WHERE
+            sid = #{sid}
+    </select>
+
+    <!-- 一條 SQL 語句：association -->
+    <resultMap id="studentResultMapAssociation" type="Student">
+        <id property="sid" column="sid"/>
+        <result property="sname" column="sname"/>
+        <!--
+            association：翻譯為關聯。一個 Student 物件關聯一個 Clazz 物件。
+            property：提供要映射的 POJO 類的屬性名。
+            javaType：用來指定要映射的 java 類型。
+        -->
+        <association property="clazz" javaType="Clazz">
+            <id property="cid" column="cid"/>
+            <result property="cname" column="cname"/>
+        </association>
+    </resultMap>
+
+    <select id="selectByIdAssociation" resultMap="studentResultMapAssociation">
+        SELECT
+            s.sid, s.sname, c.cid, c.cname
+        FROM
+            t_stu s left join t_clazz c on s.cid = c.cid
+        WHERE
+            s.sid = #{sid}
+    </select>
+
+    <!-- 多對一映射的第一種方式：一條 SQL 語句，級聯屬性映射 -->
+    <resultMap id="studentResultMap" type="student">
+        <id property="sid" column="sid"/>
+        <result property="sname" column="sname"/>
+        <result property="clazz.cid" column="cid"/>
+        <result property="clazz.cname" column="cname"/>
+    </resultMap>
+
+    <select id="selectById" resultMap="studentResultMap">
+        SELECT
+            s.sid, s.sname, c.cid, c.cname
+        FROM
+            t_stu s left join t_clazz c on s.cid = c.cid
+        WHERE
+            s.sid = #{sid}
+    </select>
+</mapper>

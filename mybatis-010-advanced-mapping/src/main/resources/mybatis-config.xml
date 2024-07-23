@@ -5,7 +5,7 @@
 <configuration>
     <properties resource="jdbc.properties"/>
     <typeAliases>
-        <package name=""/>
+        <package name="com.powernode.mybatis.pojo"/>
     </typeAliases>
     <environments default="dev">
         <environment id="dev">
@@ -19,6 +19,6 @@
         </environment>
     </environments>
     <mappers>
-        <package name=""/>
+        <package name="com.powernode.mybatis.mapper"/>
     </mappers>
 </configuration>
