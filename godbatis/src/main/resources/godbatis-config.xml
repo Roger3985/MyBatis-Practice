@@ -7,11 +7,11 @@
             <!-- 資料源是獲取 connection 物件的。 -->
             <!-- POOLED UNPOOLED JNDI -->
             <!-- 所有的資料源都要實現 JDK 帶的規範：javax.sql.DataSource -->
-            <dataSource type="POOLED">
-                <property name="driver" value="${jdbc.driver}"/>
-                <property name="url" value="${jdbc.url}"/>
-                <property name="username" value="${jdbc.username}"/>
-                <property name="password" value="${jdbc.password}"/>
+            <dataSource type="UNPOOLED">
+                <property name="driver" value="org.postgresql.Driver"/>
+                <property name="url" value="jdbc:postgresql://localhost:5433/postgres"/>
+                <property name="username" value="postgres"/>
+                <property name="password" value="mysecretpassword"/>
             </dataSource>
         </environment>
         <environment id="mybatisDB">
@@ -26,5 +26,6 @@
     </environments>
     <mappers>
         <mapper resource="sqlMapper.xml"/>
+        <mapper resource="sqlMapper2.xml"/>
     </mappers>
 </configuration>

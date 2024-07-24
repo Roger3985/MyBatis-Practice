@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- 樣例 -->
+<mapper namespace="user2">
+    <insert id="insertUser">
+        INSERT INTO
+            user
+        VALUES(#{id}, #{name}, #{age})
+    </insert>
+    <select id="selectById" resultType="com.powernode.mybatis.pojo.User">
+        SELECT
+            *
+        FROM
+            user
+        WHERE
+            id = #{id}
+    </select>
+</mapper>

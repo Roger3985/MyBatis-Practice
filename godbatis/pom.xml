@@ -30,6 +30,21 @@
       <artifactId>jaxen</artifactId>
       <version>1.2.0</version>
     </dependency>
+
+    <!-- junit 依賴 -->
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.13.2</version>
+      <scope>test</scope>
+    </dependency>
+
+    <!-- postgres(driver) 依賴 -->
+    <dependency>
+      <groupId>org.postgresql</groupId>
+      <artifactId>postgresql</artifactId>
+      <version>42.7.3</version>
+    </dependency>
   </dependencies>
 
   <build>
