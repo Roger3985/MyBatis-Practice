@@ -1,12 +1,14 @@
 package com.powernode.mybatis.pojo;
 
+import java.io.Serializable;
+
 /**
  * 封裝汽車相關訊息的 pojo 類。普通的 java 類
  * @author Roger
  * @version 1.0
  * @since 1.0
  */
-public class Car {
+public class Car implements Serializable {
     // 資料庫表當中的字段應該和 pojo 類的屬性一一對應上。
     // 建議使用包裝類，這樣可以防止 null 的問題。
     private Integer id;

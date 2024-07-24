@@ -1,0 +1,22 @@
+<!--<?xml version="1.0" encoding="UTF-8"?>-->
+<!--<ehcache-->
+<!--        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"-->
+<!--        xsi:noNamespaceSchemaLocation="http://ehcache.org/ehcache.xsd"-->
+<!--        updateCheck="false">-->
+<!--    &lt;!&ndash;磁盤存儲: 將緩存中暫時不使用的對象，轉移到硬盤，類似於Windows系統的虛擬內存&ndash;&gt;-->
+<!--    <diskStore path="e:/ehcache"/>-->
+
+<!--    &lt;!&ndash;defaultCache: 默認的管理策略&ndash;&gt;-->
+<!--    &lt;!&ndash;eternal: 設定緩存的elements是否永遠不過期。如果為true，則緩存的數據始終有效，如果為false那麼還要根據timeToIdleSeconds, timeToLiveSeconds判斷&ndash;&gt;-->
+<!--    &lt;!&ndash;maxElementsInMemory: 在內存中緩存的element的最大數目&ndash;&gt;-->
+<!--    &lt;!&ndash;overflowToDisk: 如果內存中數據超出內存存儲限制，是否要緩存到磁盤上&ndash;&gt;-->
+<!--    &lt;!&ndash;diskPersistent: 是否在磁盤上持久化。指重啟jvm後，數據是否有效。默認為false&ndash;&gt;-->
+<!--    &lt;!&ndash;timeToIdleSeconds: 對象空閒時間(單位：秒)，指對象在多長時間內沒有被訪問則失效。只有eternal為false的有效。默認值0，表示一直可以訪問&ndash;&gt;-->
+<!--    &lt;!&ndash;timeToLiveSeconds: 對象存活時間(單位：秒)，指對象從建立到失效所需要的時間。只有eternal為false的有效。默認值0，表示一直可以訪問&ndash;&gt;-->
+<!--    &lt;!&ndash;memoryStoreEvictionPolicy: 緩存的3種清除策略&ndash;&gt;-->
+<!--    &lt;!&ndash;FIFO: first in first out (先進先出)&ndash;&gt;-->
+<!--    &lt;!&ndash;LFU: Less Frequently Used (最少使用)，意思是一直以來最少被使用的。緩存的元素有一個hit屬性，hit值最小的將會被清出緩存&ndash;&gt;-->
+<!--    &lt;!&ndash;LRU: Least Recently Used (最近最少使用) (ehcache默認值)，緩存的元素有一個時可用屬性，當緩存容量滿了，而又需要騰出地方來保存新的元素時候，將會清除最近最少被使用的元素&ndash;&gt;-->
+<!--    <defaultCache eternal="false" maxElementsInMemory="1000" overflowToDisk="false" diskPersistent="false"-->
+<!--                  timeToIdleSeconds="0" timeToLiveSeconds="600" memoryStoreEvictionPolicy="LRU"/>-->
+<!--</ehcache>-->

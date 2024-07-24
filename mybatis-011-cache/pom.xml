@@ -17,6 +17,13 @@
   </properties>
 
   <dependencies>
+    <!-- mybatis 集成 ehcache 的組件 -->
+    <!-- <dependency>
+      <groupId>org.mybatis.caches</groupId>
+      <artifactId>mybatis-ehcache</artifactId>
+      <version>1.2.3</version>
+    </dependency> -->
+
     <!-- mybatis 依賴 -->
     <dependency>
       <groupId>org.mybatis</groupId>

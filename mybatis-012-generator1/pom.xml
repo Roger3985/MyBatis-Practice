@@ -1,0 +1,46 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.powernode</groupId>
+  <artifactId>mybatis-012-generator1</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>mybatis-012-generator1</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.compiler.source>21</project.compiler.source>
+    <project.compiler.target>21</project.compiler.target>
+  </properties>
+
+  <!-- 配置 mybatis 逆向工程的插件 -->
+  <!-- 定制建構過程 -->
+  <build>
+    <!-- 可以配置多個插件 -->
+    <plugins>
+      <!-- 其中的一個插件：mybatis 逆向工程插件 -->
+      <plugin>
+        <!-- 插件的 GAV 座標 -->
+        <groupId>org.mybatis.generator</groupId>
+        <artifactId>mybatis-generator-maven-plugin</artifactId>
+        <version>1.4.1</version>
+        <!-- 允許覆蓋 -->
+        <configuration>
+          <overwrite>true</overwrite>
+        </configuration>
+        <!-- 插件的依賴 -->
+        <dependencies>
+          <!-- postgres(driver) 依賴 -->
+          <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.7.3</version>
+          </dependency>
+        </dependencies>
+      </plugin>
+    </plugins>
+  </build>
+</project>

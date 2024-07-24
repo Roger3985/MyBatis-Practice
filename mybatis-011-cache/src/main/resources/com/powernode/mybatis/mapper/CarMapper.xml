@@ -4,7 +4,31 @@
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.powernode.mybatis.mapper.CarMapper">
 
+    <!--
+        默認情況下，二級緩存機制是開啟的。
+        只需要在對應的 SqlMapper.xml 文件中添加以下標籤。用來表示"我"使用該二級緩存。
+    -->
+    <cache/>
+
+    <!-- 集成 Ehcache 組件 -->
+    <!-- <cache type="org.mybatis.caches.ehcache.EhcacheCache"/> -->
+
+    <insert id="insertClazz">
+        INSERT INTO
+            t_clazz
+        VALUES(#{cid}, #{cname})
+    </insert>
+
     <select id="selectById" resultType="Car">
+        SELECT
+            *
+        FROM
+            car
+        WHERE
+            id = #{id}
+    </select>
+
+    <select id="selectById2" resultType="Car">
         SELECT
             *
         FROM
