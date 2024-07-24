@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <properties resource="jdbc.properties"/>
+    <settings>
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+    </settings>
+    <typeAliases>
+        <package name="com.powernode.mybatis.pojo"/>
+    </typeAliases>
+
+    <!-- mybatis 分頁的攔截器 -->
+    <plugins>
+        <plugin interceptor="com.github.pagehelper.PageInterceptor"></plugin>
+    </plugins>
+    <environments default="dev">
+        <environment id="dev">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="org.postgresql.Driver"/>
+                <property name="url" value="jdbc:postgresql://localhost:5433/postgres"/>
+                <property name="username" value="postgres"/>
+                <property name="password" value="mysecretpassword"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <mappers>
+        <package name="com.powernode.mybatis.mapper"/>
+    </mappers>
+</configuration>
