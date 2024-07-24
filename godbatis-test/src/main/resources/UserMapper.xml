@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<mapper namespace="user">
+    <insert id="insertUser">
+        INSERT INTO
+            t_user(name, age)
+        VALUES
+            (#{name}, #{age})
+    </insert>
+
+    <select id="selectById" resutltType="com.powernode.godbatis.pojo">
+        SELECT
+            *
+        FROM
+            t_user
+        WHERE
+            id = #{id}
+    </select>
+</mapper>

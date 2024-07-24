@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- 樣例 -->
+<configuration>
+    <environments default="powernodeDB">
+        <environment id="powernodeDB">
+            <transactionManager type="JDBC"/>
+            <!-- 資料源是獲取 connection 物件的。 -->
+            <!-- POOLED UNPOOLED JNDI -->
+            <!-- 所有的資料源都要實現 JDK 帶的規範：javax.sql.DataSource -->
+            <dataSource type="UNPOOLED">
+                <property name="driver" value="org.postgresql.Driver"/>
+                <property name="url" value="jdbc:postgresql://localhost:5433/postgres"/>
+                <property name="username" value="postgres"/>
+                <property name="password" value="mysecretpassword"/>
+            </dataSource>
+        </environment>
+        <environment id="mybatisDB">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="org.postgresql.Driver"/>
+                <property name="url" value="jdbc:postgresql://localhost:5433/mybatis"/>
+                <property name="username" value="postgres"/>
+                <property name="password" value="mysecretpassword"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <mappers>
+        <mapper resource="UserMapper.xml"/>
+    </mappers>
+</configuration>
