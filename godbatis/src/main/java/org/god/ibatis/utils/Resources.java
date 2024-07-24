@@ -19,6 +19,11 @@ public class Resources {
      */
     private Resources() {}
 
+    /**
+     * 從類路徑當中加載資源。
+     * @param resource 放在類路徑當中的資源文件。
+     * @return 指向資源文件的一個輸入流。
+     */
     public static InputStream getResourceAsStream(String resource) {
         return ClassLoader.getSystemClassLoader().getResourceAsStream(resource);
     }
