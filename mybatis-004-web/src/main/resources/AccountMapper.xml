@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="account">
+
+    <select id="selectByActno" resultType="com.powernode.bank.pojo.Account">
+        SELECT
+            *
+        FROM
+            t_act
+        WHERE
+            actno = #{actno}
+    </select>
+
+    <update id="updateByActno">
+        UPDATE
+            t_act
+        SET
+            balance = #{balance}
+        WHERE
+            actno = #{actno}
+    </update>
+</mapper>
