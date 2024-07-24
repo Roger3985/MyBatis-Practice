@@ -4,6 +4,15 @@
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.powernode.mybatis.mapper.StudentMapper">
 
+    <select id="selectByCidStep2" resultType="Student">
+        SELECT
+            *
+        FROM
+            t_stu
+        WHERE
+            cid = #{cid}
+    </select>
+
     <!--
         * 分步查詢的優點：
             第一：複用性增強，可以重複利用。（大步拆成 N 多個小碎步。每一個小碎步更加可以重複利用。）

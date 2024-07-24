@@ -4,6 +4,50 @@
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.powernode.mybatis.mapper.ClazzMapper">
 
+    <!-- 分步查詢第一步：根據班級的 cid 獲取班級信息。 -->
+    <!-- 加上 fetchType="eager" 的話，儘管有開啟全局的延遲加載，執行範圍內還是會兩步驟都會查詢，就是這邊的延遲查詢不起效，因為開啟了 lazyType="eager"。 -->
+    <resultMap id="clazzResultMapSetp" type="Clazz">
+        <id property="cid" column="cid"/>
+        <result property="cname" column="cname"/>
+        <collection property="stus"
+                    select="com.powernode.mybatis.mapper.StudentMapper.selectByCidStep2"
+                    column="cid"
+                    fetchType="eager"/>
+    </resultMap>
+
+    <select id="selectByStep1" resultMap="clazzResultMapSetp">
+        SELECT
+            cid, cname
+        FROM
+            t_clazz
+        WHERE
+            cid = #{cid}
+    </select>
+
+    <resultMap id="clazzResultMap" type="Clazz">
+        <id property="cid" column="cid"/>
+        <result property="cname" column="cname"/>
+        <!-- 一對多，這裡是 collection。collection 是集合的意思。 -->
+        <!-- ofType 屬性用來指定集合當中的元素類型。 -->
+        <collection property="stus" ofType="Student">
+            <id property="sid" column="sid"/>
+            <result property="sname" column="sname"/>
+        </collection>
+    </resultMap>
+
+    <select id="selectByCollection" resultMap="clazzResultMap">
+        SELECT
+            c.cid, c.cname, s.sid, s.sname
+        FROM
+            t_clazz c
+        LEFT JOIN
+            t_stu s
+        ON
+            c.cid = s.cid
+        WHERE
+            c.cid = #{cid}
+    </select>
+
     <!-- 分步查詢第二步：根據 cid 獲取班級信息。 -->
     <select id="selectByIdStep2" resultType="clazz">
         SELECT

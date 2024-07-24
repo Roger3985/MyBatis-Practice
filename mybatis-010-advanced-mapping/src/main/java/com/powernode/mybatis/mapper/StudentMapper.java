@@ -2,7 +2,16 @@ package com.powernode.mybatis.mapper;
 
 import com.powernode.mybatis.pojo.Student;
 
+import java.util.List;
+
 public interface StudentMapper {
+
+    /**
+     * 根據班級編號查詢學生信息。
+     * @param cid 班級編號。
+     * @return List 的學生集合。
+     */
+    List<Student> selectByCidStep2(Integer cid);
 
     /**
      * 分步查詢的第一步：先根據學生的 sid 查詢學生的信息。
