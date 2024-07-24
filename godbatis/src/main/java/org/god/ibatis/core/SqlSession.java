@@ -2,9 +2,7 @@ package org.god.ibatis.core;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import java.sql.*;
 
 /**
  * 專門負責執行 SQL 語句的會話物件。
@@ -79,7 +77,62 @@ public class SqlSession {
         return count;
     }
 
-    // selectOne
+    /**
+     * 執行查詢語句，返回一個物件，該方法只適合返回一條紀錄的 SQL 語句。
+     * @param sqlId sql 語句的 id。
+     * @param param 參數。
+     * @return Object 物件。
+     */
+    public Object selectOne(String sqlId, Object param) {
+        Object obj = null;
+        try {
+            Connection connection = factory.getTransaction().getConnection();
+            MappedStatement mappedStatement = factory.getMappedStatementMaps().get(sqlId);
+            // 這是要查詢的 DQL 語句。
+            // select * from where id = #{id}
+            String godbatisSql = mappedStatement.getSql();
+            String sql = godbatisSql.replaceAll("#\\{[a-zA-Z0-9_$]*}", "?");
+            PreparedStatement ps = connection.prepareStatement(sql);
+            // 給占位符傳值
+            ps.setString(1, param.toString());
+            // 查詢返回結果集
+            ResultSet rs = ps.executeQuery();
+            // 要封裝的結果類型。
+            String resultType = mappedStatement.getResultType(); // org.god.ibatis.pojo.User
+            // 從結果集中取資料，封裝 java 物件
+            if (rs.next()) {
+                // 獲取 resultType 的 Class
+                Class<?> resultTypeClass = Class.forName(resultType);
+                // 調用無參數建構方法創建物件
+                obj = resultTypeClass.newInstance(); // Object obj = new User();
+                // 給 User 類的 id, name, age 屬性賦值
+                // 給 obj 物件的哪個屬性賦哪個值
+                /*
+                    postgres> select * from t_user where id = 1;
+                     id |   name   | age
+                    ----+----------+-----
+                      1 | zhangsan | 20
+                    解決結果的關鍵：將查詢結果的列名作為屬性名。
+                    列名是 id，那麼屬性名就是 id。
+                    列名是 name，那麼屬性名就是 name。
+                 */
+                ResultSetMetaData rsmd = rs.getMetaData();
+                int columnCount = rsmd.getColumnCount();
+                for (int i = 0; i < columnCount; i++) {
+                    String propertyName = rsmd.getColumnName(i + 1);
+                    // 拼接方法名
+                    String setMethodName = "set" + propertyName.toUpperCase().charAt(0) + propertyName.substring(1);
+                    // 獲取 set 方法
+                    Method setMethod = resultTypeClass.getDeclaredMethod(setMethodName, String.class);
+                    // 調用 set 方法給物件 obj 屬性賦值
+                    setMethod.invoke(obj, rs.getString(propertyName));
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return obj;
+    }
 
 
     // 局部測試

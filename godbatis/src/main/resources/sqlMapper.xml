@@ -6,7 +6,7 @@
             t_user(name, age)
         VALUES(#{name}, #{age})
     </insert>
-    <select id="selectById" resultType="com.powernode.mybatis.pojo.User">
+    <select id="selectById" resultType="org.god.ibatis.pojo.User">
         SELECT
             *
         FROM
