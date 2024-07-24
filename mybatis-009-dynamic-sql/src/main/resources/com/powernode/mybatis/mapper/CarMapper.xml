@@ -15,10 +15,10 @@
 
     <insert id="insertBatch">
         INSERT INTO
-            car
+            car(car_num, brand, guide_price, produce_time, car_type)
         VALUES
         <foreach collection="cars" item="car" separator=",">
-            (#{car.id}, #{car.carNum}, #{car.brand}, #{car.guidePrice}, #{car.produceTime}, #{car.carType})
+            (#{car.carNum}, #{car.brand}, #{car.guidePrice}, #{car.produceTime}, #{car.carType})
         </foreach>
     </insert>
 
