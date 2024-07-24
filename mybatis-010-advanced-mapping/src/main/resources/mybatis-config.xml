@@ -4,6 +4,11 @@
         "https://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
     <properties resource="jdbc.properties"/>
+    <settings>
+        <!-- 延遲加載的全局開關，默認值 false 不開啟。 -->
+        <!-- 什麼意思：所有只要但凡帶有分步的，都採用延遲加載。 -->
+        <setting name="lazyLoadingEnabled" value="true"/>
+    </settings>
     <typeAliases>
         <package name="com.powernode.mybatis.pojo"/>
     </typeAliases>

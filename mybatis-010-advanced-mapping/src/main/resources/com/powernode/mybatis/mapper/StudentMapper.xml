@@ -5,14 +5,21 @@
 <mapper namespace="com.powernode.mybatis.mapper.StudentMapper">
 
     <!--
-        分步查詢的優點：
+        * 分步查詢的優點：
             第一：複用性增強，可以重複利用。（大步拆成 N 多個小碎步。每一個小碎步更加可以重複利用。）
             第二：採用這種的分步查詢，可以充分利用他們的延遲加載/延遲加載（懶加載）機制
-            -> 在 mybatis 當中怎麼開啟延遲延遲？
-
         * 什麼是延遲加載（懶加載），有什麼用？
-          -> 延遲加載的核心原理：用的時候再執行查詢語氣。不用的時候不查詢。
-             作用：提高性能。
+            延遲加載的核心原理：用的時候再執行查詢語氣。不用的時候不查詢。
+            作用：提高性能。
+        * 在 mybatis 當中怎麼開啟延遲延遲？
+            Ans: association 標籤中添加 fetchType="lazy"
+            注意：默認情況下是沒有開啟延遲加載的，需要設置：fetchType="lazy"
+            這種在 association 標籤中配置 fetchType="lazy" 是局部的設置，只對當前的 association 關聯的 sql 語句起作用。
+        * 在實際的開發中，大部分都是需要使用延遲加載，所以建議開啟的全局加載機制：
+            在 mybatis 核心配置文件中添加全局配置：lazyLoadingEnabled=true
+        * 實際開發中的模式：
+            把全局的延遲加載打開。
+            如果某一步不需要使用延遲加載，請設置：fetchType="eager"
 
           -> 其他的 select 會跟迪卡爾機
              3 * 4 = 3 * 4（需要執行 12 次：效能較差）
@@ -24,7 +31,8 @@
         <result property="sname" column="sname"/>
         <association property="clazz"
                      select="com.powernode.mybatis.mapper.ClazzMapper.selectByIdStep2"
-                     column="cid"/>
+                     column="cid"
+                     fetchType="eager"/>
     </resultMap>
 
     <select id="selectByIdStep1" resultMap="studentResultMapByStep">

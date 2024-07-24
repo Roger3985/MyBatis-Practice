@@ -13,7 +13,14 @@ public class StudentMapperTest {
         SqlSession sqlSession = SqlSessionUtil.openSession();
         StudentMapper mapper = sqlSession.getMapper(StudentMapper.class);
         Student student = mapper.selectByIdStep1(1);
-        System.out.println(student);
+        // System.out.println(student);
+
+        // 只需要看學生的名字
+        System.out.println(student.getSname());
+
+        // 程式執行到這裡了，我想要看看班級的名字
+        // System.out.println(student.getClazz().getCname());
+
         sqlSession.close();
     }
 
