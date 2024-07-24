@@ -3,14 +3,14 @@
 <mapper namespace="user">
     <insert id="insertUser">
         INSERT INTO
-            user
-        VALUES(#{id}, #{name}, #{age})
+            t_user(name, age)
+        VALUES(#{name}, #{age})
     </insert>
     <select id="selectById" resultType="com.powernode.mybatis.pojo.User">
         SELECT
             *
         FROM
-            user
+            t_user
         WHERE
             id = #{id}
     </select>

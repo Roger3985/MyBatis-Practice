@@ -1,0 +1,6 @@
+DROP TABLE IF EXISTS t_user;
+CREATE TABLE t_user (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(255),
+    age VARCHAR(255)
+);

@@ -29,6 +29,18 @@ public class SqlSessionFactory {
      */
     private Map<String, MappedStatement> mappedStatementMaps;
 
+    /**
+     * 獲取 Sql 會話物件。
+     * @return sqlSession 物件。
+     */
+    public SqlSession openSession() {
+        // 開啟會話的前提是開啟連接（連接打開了）
+        transaction.openConnection();
+        // 創建 SqlSession 物件
+        SqlSession sqlSession = new SqlSession(this);
+        return sqlSession;
+    }
+
     public SqlSessionFactory() {
     }
 

@@ -77,6 +77,8 @@ public class JdbcTransaction implements Transaction {
         if (connection == null) {
             try {
                 connection = dataSource.getConnection();
+                // 開啟交易
+                connection.setAutoCommit(autoCommit);
             } catch (SQLException e) {
                 e.printStackTrace();
             }
