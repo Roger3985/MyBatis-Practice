@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <!--
+        targetRuntime 有兩個值：
+        MyBatis3Simple: 生成的是基礎版，只有基礎的增刪改查。
+        MyBatis3: 生成的是增強版，除了基礎版之外還有複雜的增刪改查。
+    -->
+    <context id="DB2Tables" targetRuntime="MyBatis3">
+        <!-- 防止生成重複代碼 -->
+        <plugin type="org.mybatis.generator.plugins.UnmergeableXmlMappersPlugin"/>
+
+        <commentGenerator>
+            <!-- 是否去掉生成日期 -->
+            <property name="suppressDate" value="true"/>
+            <!-- 是否去除注釋 -->
+            <property name="suppressAllComments" value="true"/>
+        </commentGenerator>
+
+        <!-- 連接數據庫信息 -->
+        <jdbcConnection driverClass="org.postgresql.Driver"
+                        connectionURL="jdbc:postgresql://localhost:5433/postgres"
+                        userId="postgres"
+                        password="mysecretpassword">
+        </jdbcConnection>
+
+        <!-- 生成 pojo 包名和位置 -->
+        <javaModelGenerator targetPackage="com.powernode.mybatis.pojo" targetProject="src/main/java">
+            <!-- 是否開啟子包 -->
+            <property name="enableSubPackages" value="true"/>
+            <!-- 是否去除字段的前後空白 -->
+            <property name="trimStrings" value="true"/>
+        </javaModelGenerator>
+
+        <!-- 生成 SQL 映射文件的包名和位置 -->
+        <sqlMapGenerator targetPackage="com.powernode.mybatis.mapper" targetProject="src/main/resources">
+            <!-- 是否開啟子包 -->
+            <property name="enableSubPackages" value="true"/>
+        </sqlMapGenerator>
+
+        <!-- 生成 Mapper 接口的包名和位置 -->
+        <javaClientGenerator type="xmlMapper" targetPackage="com.powernode.mybatis.mapper" targetProject="src/main/java">
+            <property name="enableSubPackages" value="true"/>
+        </javaClientGenerator>
+
+        <!-- 表名和對應的實體類名 -->
+        <table tableName="car" domainObjectName="Car"/>
+    </context>
+</generatorConfiguration>
