@@ -1,5 +1,8 @@
 package com.powernode.bank.service;
 
+import com.powernode.bank.exceptions.MoneyNotEnoughException;
+import com.powernode.bank.exceptions.TransferException;
+
 /**
  * 注意：業務類當中的業務方法的名字在起名的時候，最好見名知意。能夠體現出具體的業務是做什麼的。
  * 帳戶業務類。
@@ -15,5 +18,5 @@ public interface AccountService {
      * @param toActno 轉入帳號。
      * @param money 轉帳金額。
      */
-    void transfer(String fromActno, String toActno, double money);
+    void transfer(String fromActno, String toActno, double money) throws MoneyNotEnoughException, TransferException;
 }

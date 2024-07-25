@@ -4,5 +4,16 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
                              http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0"
-         metadata-complete="true">
+         metadata-complete="false">
+         <!-- 以上 metadata-complete="true" 代表只支持 web.xml 配置  -->
+         <!-- 以上 metadata-complete="false" 代表支持 web.xml and @WerServlet 兩者皆可以配置，但假如兩者都配置 以 web.xml 為主(intelliJ 只能擇一配置，不能兩個都配置，會出錯)  -->
+
+    <!-- <servlet>
+        <servlet-name>test</servlet-name>
+        <servlet-class>com.powernode.bank.web.AccountServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>test</servlet-name>
+        <url-pattern>/transfer</url-pattern>
+    </servlet-mapping> -->
 </web-app>

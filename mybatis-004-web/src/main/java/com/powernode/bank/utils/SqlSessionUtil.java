@@ -44,11 +44,34 @@ public class SqlSessionUtil {
         return sqlSession;
     } */
 
+    // 全局的，服務器級別的，一個服務器當中定義一個即可。
+    // 為什麼把 SqlSession 物件放到 ThreadLocal 當中呢？為了保證一個執行緒對應一個 SqlSession。
+    private static ThreadLocal<SqlSession> local = new ThreadLocal<>();
+
     /**
      * 獲取會話物件
      * @return 會話物件
      */
     public static SqlSession openSession() {
-        return sqlSessionFactory.openSession();
+        SqlSession sqlSession = local.get();
+        if (sqlSession == null) {
+            sqlSession = sqlSessionFactory.openSession();
+            // 將 sqlSession 物件綁定到當前的執行緒上
+            local.set(sqlSession);
+        }
+        return sqlSession;
+    }
+
+    /**
+     * 關閉 SqlSession 物件（從當前執行緒中移除 SqlSession 物件）。
+     * @param sqlSession
+     */
+    public static void close(SqlSession sqlSession) {
+        if (sqlSession != null) {
+            sqlSession.close();
+            // 注意：需要移除 SqlSession 物件和當前執行緒的綁定關係。
+            // 因為 Tomcat 服務器支持執行緒池，也就是說：用過的執行緒物件 t1，可能下次還會使用這個 t1 執行緒。
+            local.remove();
+        }
     }
 }
