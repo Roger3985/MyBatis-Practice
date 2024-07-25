@@ -2,9 +2,13 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="account">
 
-    <select id="selectByActno" resultType="com.powernode.bank.pojo.Account">
+<!-- sqlMapper.xml 文件的編寫者，提供者是誰？使用你 mybatis 框架中的 java 工程師負責提供的。 -->
+<!-- 要想使用這種動態代理機制：namespace 必須是 dao 介面的全限定名稱。 -->
+<mapper namespace="com.powernode.bank.dao.AccountDao">
+
+    <!-- 要想使用這種機制：id 必須是 dao 介面的方法名 -->
+    <select id="selectByActon" resultType="com.powernode.bank.pojo.Account">
         SELECT
             *
         FROM

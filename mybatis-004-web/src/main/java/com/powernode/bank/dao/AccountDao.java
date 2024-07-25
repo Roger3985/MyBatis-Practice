@@ -1,6 +1,7 @@
 package com.powernode.bank.dao;
 
 import com.powernode.bank.pojo.Account;
+import org.apache.ibatis.annotations.Mapper;
 
 /**
  * 帳戶的 Dao 物件，負責 t_act 表中資料的 CRUD。
@@ -10,6 +11,14 @@ import com.powernode.bank.pojo.Account;
  * @version 1.0
  * @since 1.0
  */
+
+/**
+ * 添加了 @Mapper 註解之後這個介面在編譯時會產生相應的實現類。
+ *
+ * 需要注意的是：這個介面中不可以定義同名的方法，因為會生成相同的 id。
+ * 也就是說這個介面是不支持重載的。
+ */
+@Mapper
 public interface AccountDao {
 
     /**
@@ -25,5 +34,4 @@ public interface AccountDao {
      * @return 1 表示更新成功，其他值表示更新失敗。
      */
     int updateByActno(Account act);
-
 }
